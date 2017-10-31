@@ -1,0 +1,41 @@
+/************** Authors *****************/
+
+body {
+	background-color: $nordeaPeach;
+}
+
+#authors-container {
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 0 10% 0 10%;
+
+
+	.item {
+		background-color: $nordeaPeach;
+		height: $authorBox-height;
+		width: $authorBox-width;
+		    margin: 5%;
+	}
+
+	.item-img {
+		background-color: $nordeaBlue;
+    	width: 100%;
+    	height: 80%;
+	}
+
+	.item-name{
+		align-items: center; 
+		justify-content: center;
+		height: 20%;
+    	width: 100%;
+
+    	h2 {
+    		align-items: center; 
+    	}
+	}
+
+
+}
