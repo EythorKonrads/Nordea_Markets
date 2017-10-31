@@ -143,7 +143,8 @@ table {
   width: 100%;
   background-image: url(".././img/banner.png");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .login:before {
     content: '';
     position: absolute;
