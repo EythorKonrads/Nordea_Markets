@@ -1,0 +1,110 @@
+/******************  Desktop HEADER   *********************/
+.header{
+  height:80px;
+  width: 100%;
+  background: $mainBlue;
+  .headerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0px 20px;
+  }
+}
+
+/* sidebar */
+.sidebar{
+  transition: .3s ease all;
+  position: absolute;
+  left: -100px;
+  width: 0px;
+  height:100vh;
+}
+.sidebarButtonContainer, .userNavButtonContainer{
+  height: 60px;
+  position: relative;
+  border-bottom: 1px solid blue;
+}
+.active {
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    position: absolute;
+    transition: 0.5s;
+    width: 250px;
+    height: 100vh;
+    transition: .3s ease all;
+    background: $mainBlue;
+    box-shadow: -1px 1px 4px 1px rgba(0,0,0,0.50);
+}
+
+/* navigation Sidebar */
+
+.sidebarNav, .userNav{
+  ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    li{
+      height:70px;
+      color:white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid #C3CED7;
+      border-bottom: 1px solid #C3CED7;
+      &:hover{
+        background: $btnHover;
+        transition: background 0.3s ease-in;
+        box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
+      }
+    }
+  }
+}
+
+/* close button sidebar */
+
+.close-x {
+  stroke: white;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5;
+}
+
+.btnCloseSidebar{
+  position: absolute;
+  top: 15px;
+  width: 30px;
+  right: 10px;
+}
+
+
+/* User */
+.btnCloseUserNav{
+  position: absolute;
+  top: 15px;
+  width: 30px;
+  left: 10px;
+}
+.userMenuNav{
+
+  position: absolute;
+  top: -300px;
+  right: -200px;
+  width: 0px;
+  height: 300px;
+  overflow: hidden;
+  background: $mainBlue;
+  transition: width .3s ease-out;
+}
+
+.activeUserNav{
+  border-radius: 2px;
+  height: auto;
+  width: 200px;
+  background: $mainBlue;
+  right: 0px;
+  top: 0px;
+  transition: right .3s ease;
+}
