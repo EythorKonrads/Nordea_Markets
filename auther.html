@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <img  src="icons/menu.svg" class="burger"/>
+        <!-- NAVIGATION SECTION -->
+    <div class="navigation-section cPage">
+      <div class="navigation">
+        <ul>
+          <li>Author</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ul>
+      </div>
+    </div>
+        <!-- ABOUT AUTHER SECTION -->
+    <div class="authorSection">
+      <h3>back to page</h3>
+      <div class="author">
+        <div class="authorSectionPhoto">
+          <div  class="authorPhoto"  style=" background-image: url('./images/mark.jpeg')"></div>
+          <h2>John Doe</h2>
+        </div>
+        <div class="authorContainer">
+          <div class="authorContainer-name"><h2>John Doe</h2></div>
+          <div class="authorContainer-about">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing </p>
+          </div>
+        </div>
+      </div>
+      <!-- FILTER SECTION -->
+      <div class="filter">
+        <select name="Compare">
+          <option value="author">Author</option>
+          <option value="date">Date</option>
+        </select>
+        <select name="14 jan - 14 feb">
+          <option value="date">14 feb - 14 mars</option>
+        </select>
+      </div>
+      <!-- VISITS SECTION -->
+      <div class="visits">
+
+        <div class="visit-chart">
+          <ul>
+            <li class="bar-chart"></li>
+            <li class="bar-chart"></li>
+            <li class="bar-chart"></li>
+            <li class="bar-chart"></li>
+          </ul>
+        </div>
+
+        <div class="visit-chart-buttons">
+          <ul>
+            <li class="button-chart">Visits</li>
+            <li class="button-chart">Click rate</li>
+            <li class="button-chart">Session</li>
+            <li class="button-chart">Bounce rate</li>
+            <li class="button-chart">Users</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+
+  <script>
+
+    document.addEventListener("click", function(e){
+      if(e.target.className == 'burger'){
+        var x = document.querySelector(".navigation-section");
+        var y = document.querySelector(".navigation");
+        if(x.style.display != "flex"){
+          x.style.display = "flex";
+          y.classList.add("test");
+        }else {
+          x.style.display = "none";
+          y.classList.remove("test");
+        }
+      }
+    })
+
+
+  </script>
+</html>

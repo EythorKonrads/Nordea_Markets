@@ -41,4 +41,143 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/******  navigation ******/
+.navigation-section {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  margin-right: 20px;
+  transition: all 5s ease-in; }
+
+.navigation {
+  width: 100%;
+  max-width: 250px;
+  position: fixed;
+  height: 100vh;
+  border: 1px solid red; }
+  .navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%; }
+    .navigation ul li {
+      font-size: 20px;
+      padding-bottom: 15px; }
+
+.cPage {
+  display: none; }
+
+.burger {
+  position: absolute;
+  height: 30px;
+  top: 10px;
+  left: 17px;
+  z-index: 1; }
+
+/******  body ******/
+body {
+  display: flex;
+  flex-direction: row; }
+
+/******  author ******/
+.test {
+  width: 600px;
+  transition: width 2s; }
+
+.authorSection {
+  position: relative;
+  margin-left: 20px;
+  padding-top: 50px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.author {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  margin-bottom: 30px; }
+  .author .authorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 50px; }
+  .author .authorSectionPhoto h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid green;
+    text-align: center;
+    font-size: 20px; }
+
+.authorContainer-name {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 20px; }
+
+.authorContainer-about {
+  font-size: 18px;
+  max-width: 500px; }
+
+.authorPhoto {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 200px;
+  background-color: black; }
+
+/******  Filter  ******/
+.filter {
+  display: flex;
+  justify-content: flex-end; }
+
+/******  visits chart  ******/
+.visits {
+  border: 1px solid blue;
+  height: auto;
+  position: relative;
+  padding: 50px 0px; }
+
+.visit-chart {
+  border: 1px solid black;
+  padding: 50px 0px; }
+
+.bar-chart {
+  border-radius: 2px;
+  height: 30px;
+  width: 75%;
+  margin-bottom: 5px; }
+  .bar-chart:nth-child(1) {
+    background: red; }
+  .bar-chart:nth-child(2) {
+    background: green;
+    width: 50%; }
+  .bar-chart:nth-child(3) {
+    background: blue;
+    width: 65%;
+    margin-top: 70px; }
+  .bar-chart:nth-child(4) {
+    background: tomato;
+    width: 20%; }
+
+/******  visits button  ******/
+.visit-chart-buttons ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.button-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  height: 150px;
+  width: 180px;
+  background-color: green;
+  margin-right: 20px;
+  margin-bottom: 15px; }
+
 /*# sourceMappingURL=style.css.map */
