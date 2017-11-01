@@ -186,10 +186,17 @@ body {
   margin: 18px 0;
   justify-content: space-between;
   flex-direction: row-reverse; }
+<<<<<<< HEAD
+=======
+  .article-header h2 {
+    font-size: 20px;
+    font-weight: 600; }
+>>>>>>> 60741ef63c8c51798366843a705d0d0fb02a3726
   .article-header span {
     font-size: 16px;
     color: #9AA0A7; }
 
+<<<<<<< HEAD
 .article-title {
   font-size: 20px;
   font-weight: 600; }
@@ -214,6 +221,8 @@ body {
       float: left;
       margin: 5px 40px 10px 0; }
 
+=======
+>>>>>>> 60741ef63c8c51798366843a705d0d0fb02a3726
 body {
   background-color: whitesmoke; }
 
@@ -312,5 +321,138 @@ button:focus {
   color: white;
   font-size: 18px;
   margin-bottom: 20px; }
+<<<<<<< HEAD
+=======
+
+.auther {
+  display: flex;
+  margin-top: 50px; }
+
+.autherBox {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: end; }
+  .autherBox .autherBoxImage {
+    background-image: url(".././img/JaneDoe.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px;
+    padding-top: 0px;
+    max-height: 180px;
+    height: 100%;
+    width: 100%; }
+
+.autherBoxInfo {
+  padding: 20px;
+  padding-top: 0px; }
+  .autherBoxInfo h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600; }
+  .autherBoxInfo p {
+    font-size: 18px; }
+  .autherBoxInfo p:nth-child(3) {
+    padding-top: 15px; }
+
+/* Filter */
+.filter {
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.filterBox {
+  display: flex;
+  flex-direction: row;
+  margin: 20px; }
+  .filterBox #btnCompareArticle, .filterBox #btnCompareDate {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid rgba(195, 206, 215, 0.44);
+    margin-right: 20px;
+    border-radius: 2px; }
+    .filterBox #btnCompareArticle a, .filterBox #btnCompareDate a {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 20px;
+      color: #5F5F5F;
+      white-space: nowrap; }
+
+/* */
+.container {
+  width: calc(100% - 100px);
+  margin: 0 auto; }
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: calc(100% - 50px); } }
+.articles-container {
+  width: 100% !important;
+  max-width: none !important; }
+  .articles-container .card {
+    width: 100% !important; }
+
+/* chart */
+#chartContainer {
+  width: 100% !important; }
+
+/* filter arrow */
+.bottom {
+  content: '';
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  margin-top: 0.8em;
+  width: 1em;
+  height: 1em;
+  border-top: 0.2em solid #B4B4B4;
+  border-right: 0.2em solid #B4B4B4;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-right: 15px; }
+
+.line {
+  width: calc(100% - 15px);
+  height: 2px;
+  background: #0020A4;
+  margin: 70px 0px; }
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100% !important;
+    margin: 0 auto; }
+
+  .autherBoxImage {
+    display: none; }
+
+  .articles-container .card {
+    flex-direction: column !important; }
+    .articles-container .card .article-thumb-left {
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+      height: 200px !important; }
+
+  .filter {
+    justify-content: center; }
+    .filter .filterBox {
+      flex-direction: column; }
+      .filter .filterBox #btnCompareArticle, .filter .filterBox #btnCompareDate {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+
+  .line {
+    width: 100%;
+    margin: 40px 0px; } }
+>>>>>>> 60741ef63c8c51798366843a705d0d0fb02a3726
 
 /*# sourceMappingURL=style.css.map */
