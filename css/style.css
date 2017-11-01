@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -40,5 +41,61 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.35; }
+
+.articles-container {
+  width: 90%;
+  max-width: 975px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 2rem; }
+
+.card {
+  background-color: #fff;
+  text-decoration: none;
+  color: #1A2834;
+  border: 1px solid #E2E5E8;
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in; }
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card .article-thumb-left {
+  width: 200px;
+  height: auto;
+  padding: 0px 50px;
+  margin: 43px 29px;
+  background-size: cover;
+  background-position: center center; }
+
+.card .card-inner-right {
+  padding: 20px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .card .card-inner-right p {
+    width: 92%; }
+
+.article-header {
+  display: flex;
+  margin: 18px 0;
+  justify-content: space-between;
+  flex-direction: row-reverse; }
+  .article-header h2 {
+    font-size: 20px;
+    font-weight: 600; }
+  .article-header span {
+    font-size: 16px;
+    color: #9AA0A7; }
 
 /*# sourceMappingURL=style.css.map */
