@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link href="css/main.css" rel="stylesheet">
+	<title>Dash board</title>
+</head>
+<body>
+
+	<div id="dashBoardContainer">
+
+		<div id="iTopDashBoard">
+			<div class="chartButtons">
+				<button id="btnClickRate" class="btnShowChart" data-showThisChart="iChartClickRate">Click Rate</button>
+				<button id="btnSession" class="btnShowChart" data-showThisChart="iChartSession">Avg Session</button>
+				<button id="btnBounceRate" class="btnShowChart" data-showThisChart="iChartBounceRate">Bounce Rate</button>
+			</div>
+
+			 <div id="iChartClickRate" class="cChart">
+				<canvas id="ChartClickRate" ></canvas>
+			</div>
+			<div id="iChartSession" class="cChart">
+				<canvas id="ChartSession" ></canvas>
+			</div>
+			<div id="iChartBounceRate" class="cChart">
+				<canvas id="ChartBounceRate" ></canvas>
+			</div>
+		</div>
+
+
+		<div id="iBottomDashBoard">
+			<div id="iChartReaders">
+				<h2>Readers</h2>
+				<canvas id="pie-chart" width="800" height="450"></canvas>
+				<p>In the past month</p>
+			</div>
+
+			<div class="dashBoardBoxContainer">
+
+				<div class="box">
+					<h2>Views</h2>
+					<img src="">
+					<h4>1845</h4>
+					<p>In the past month</p>				
+				</div>
+				<div class="box">
+					<h2>Posted</h2>
+					<img src="">
+					<h4>3</h4>
+					<p>Articles in the past month</p>
+				</div>
+				<div class="box">
+					<h2>Links</h2>
+					<img src="">
+					<h4>42</h4>
+					<p>To your Articles in the past month</p>
+				</div>
+				<div class="box">
+					<h2>Rank</h2>
+					<img src="">
+					<h4>4</h4>
+					<p>In the past month</p>
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="quoteBanner">
+
+			<h2>“The best preparation for tomorrow is doing your best today.”</h2>
+			<h3>H. Jackson Brown, Jr.</h3>
+			
+		</div>
+
+
+
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+	<script src="js/dashboard.js"></script>
+
+</body>
+</html>

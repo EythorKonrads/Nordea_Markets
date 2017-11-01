@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,6 +43,157 @@ table {
   border-spacing: 0; }
 
 body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.35; }
+
+/******************  Desktop HEADER   *********************/
+.header {
+  height: 80px;
+  width: 100%;
+  background: #0020A4; }
+  .header .headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0px 20px; }
+
+/* sidebar */
+.sidebar {
+  transition: .3s ease all;
+  position: absolute;
+  left: -100px;
+  width: 0px;
+  height: 100vh; }
+
+.sidebarButtonContainer, .userNavButtonContainer {
+  height: 60px;
+  position: relative;
+  border-bottom: 1px solid blue; }
+
+.active {
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  position: absolute;
+  transition: 0.5s;
+  width: 250px;
+  height: 100vh;
+  transition: .3s ease all;
+  background: #0020A4;
+  box-shadow: -1px 1px 4px 1px rgba(0, 0, 0, 0.5); }
+
+/* navigation Sidebar */
+.sidebarNav ul, .userNav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .sidebarNav ul li, .userNav ul li {
+    height: 70px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #C3CED7;
+    border-bottom: 1px solid #C3CED7; }
+    .sidebarNav ul li:hover, .userNav ul li:hover {
+      background: #40BFA3;
+      transition: background 0.3s ease-in;
+      box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5); }
+
+/* close button sidebar */
+.close-x {
+  stroke: white;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5; }
+
+.btnCloseSidebar {
+  position: absolute;
+  top: 15px;
+  width: 30px;
+  right: 10px; }
+
+/* User */
+.btnCloseUserNav {
+  position: absolute;
+  top: 15px;
+  width: 30px;
+  left: 10px; }
+
+.userMenuNav {
+  position: absolute;
+  top: -300px;
+  right: -200px;
+  width: 0px;
+  height: 300px;
+  overflow: hidden;
+  background: #0020A4;
+  transition: width .3s ease-out; }
+
+.activeUserNav {
+  border-radius: 2px;
+  height: auto;
+  width: 200px;
+  background: #0020A4;
+  right: 0px;
+  top: 0px;
+  transition: right .3s ease; }
+
+.articles-container {
+  width: 90%;
+  max-width: 975px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 2rem; }
+
+.card {
+  background-color: #fff;
+  text-decoration: none;
+  color: #1A2834;
+  border: 1px solid #E2E5E8;
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in; }
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card .article-thumb-left {
+  width: 200px;
+  height: auto;
+  padding: 0px 50px;
+  margin: 43px 29px;
+  background-size: cover;
+  background-position: center center; }
+
+.card .card-inner-right {
+  padding: 20px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .card .card-inner-right p {
+    width: 92%; }
+
+.article-header {
+  display: flex;
+  margin: 18px 0;
+  justify-content: space-between;
+  flex-direction: row-reverse; }
+  .article-header h2 {
+    font-size: 20px;
+    font-weight: 600; }
+  .article-header span {
+    font-size: 16px;
+    color: #9AA0A7; }
+
+body {
   background-color: whitesmoke; }
 
 .cChart {
@@ -80,5 +232,156 @@ button:focus {
   background-color: white;
   padding: 10px;
   margin-top: 50px; }
+
+.login {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url(".././img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .login:before {
+    content: '';
+    position: absolute;
+    background: rgba(3, 3, 3, 0.8);
+    width: 100%;
+    height: 100%; }
+
+.loginBox {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  max-width: 330px;
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+  top: calc(50vh - 25vh);
+  border: 1px solid #979797;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+
+#frmLoginUser {
+  display: flex;
+  flex-direction: column; }
+  #frmLoginUser input {
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 5px 0 5px 10px;
+    font-size: 14px;
+    border: 1px solid rgba(195, 206, 215, 0.44); }
+
+.loginBoxContainer {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .loginBoxContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px; }
+
+#btnLoginUser {
+  background: #40BFA3;
+  height: 40px;
+  border: 0;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px; }
+
+#dashBoardContainer {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  max-width: 1000px; }
+  #dashBoardContainer .cChart {
+    display: none; }
+  #dashBoardContainer .displayChart {
+    display: flex;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    margin-top: 50px; }
+  #dashBoardContainer #iTopDashBoard {
+    flex-direction: row;
+    display: flex;
+    padding: 50px 0; }
+    #dashBoardContainer #iTopDashBoard .chartButtons {
+      flex-direction: column;
+      margin-right: 50px; }
+      #dashBoardContainer #iTopDashBoard .chartButtons #btnClickRate {
+        background-color: #36A2EB; }
+      #dashBoardContainer #iTopDashBoard .chartButtons #btnSession {
+        background-color: #FA6384; }
+      #dashBoardContainer #iTopDashBoard .chartButtons #btnBounceRate {
+        background-color: #FFA24E; }
+      #dashBoardContainer #iTopDashBoard .chartButtons .btnShowChart {
+        height: 100px;
+        width: 100px;
+        color: white; }
+    #dashBoardContainer #iTopDashBoard #iChartClickRate, #dashBoardContainer #iTopDashBoard #iChartSession, #dashBoardContainer #iTopDashBoard #iChartBounceRate {
+      width: 804px; }
+  #dashBoardContainer #iBottomDashBoard {
+    display: flex;
+    height: auto;
+    width: 100%; }
+    #dashBoardContainer #iBottomDashBoard #iChartReaders {
+      box-sizing: border-box;
+      height: auto;
+      width: 50%;
+      border: 1px solid #D1D1D1;
+      background-color: #FAFAFA;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      #dashBoardContainer #iBottomDashBoard #iChartReaders h2 {
+        color: black; }
+    #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%; }
+      #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer .box {
+        box-sizing: border-box;
+        height: 250px;
+        width: 250px;
+        border: 1px solid #D1D1D1;
+        background-color: #FAFAFA;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer .box h2 {
+          color: black;
+          width: 100px; }
+  #dashBoardContainer #quoteBanner {
+    height: 256px;
+    width: auto;
+    background-color: #FF6385;
+    align-items: center;
+    display: flex;
+    flex-direction: column; }
+  #dashBoardContainer h2 {
+    height: 45px;
+    width: 861px;
+    color: #FFFFFF;
+    font-family: "Source Sans Pro";
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 45px;
+    text-align: center; }
+  #dashBoardContainer h3 {
+    height: 31px;
+    width: 201px;
+    color: #FFFFFF;
+    font-family: "Source Sans Pro";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 31px;
+    text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
