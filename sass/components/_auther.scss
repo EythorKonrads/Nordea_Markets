@@ -1,6 +1,6 @@
 .auther{
   display: flex;
-  padding: 50px 10px 20px 10px;
+  margin-top: 50px;
 }
 .autherBox{
   width: 100%;
@@ -13,7 +13,7 @@
     background-image:  url('.././img/JaneDoe.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     padding: 10px;
     padding-top: 0px;
     max-height:180px;
@@ -61,10 +61,48 @@
     margin-right: 20px;
     border-radius: 2px;
     a{
+      font-size: 16px;
+      font-weight: 600;
       padding: 20px;
+      color: #5F5F5F;
       white-space: nowrap;
     }
   }
+}
+
+/* */
+
+
+.container{
+  width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1000px){
+  .container{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+}
+
+
+
+/* chart */
+
+// .chart{
+//   position: relative!important;
+//   padding-bottom: 20px!important;
+//   width: 100%!important;
+// }
+//
+#chartContainer{
+  width: 100% !important;
+  // width: calc(100% - 300px)!important;
+  // margin: 0 auto!important;
+  // flex-direction: column!important;
+  // align-items: center!important;
 }
 
 
@@ -84,4 +122,11 @@
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
   margin-right: 15px;
+}
+
+.line{
+  width: calc(100% - 15px) ;
+  height:2px;
+  background: red;
+  // padding: 0px 20px;
 }
