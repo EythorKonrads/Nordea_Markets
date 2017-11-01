@@ -7,8 +7,6 @@
     <title></title>
   </head>
   <body>
-<<<<<<< HEAD
-=======
     <div class="header">
         <!-- Sidebar  -->
       <div class="sidebar">
@@ -89,8 +87,23 @@
       </div>
     </div>
 
-    <script>
+    <div class="login">
 
+        <div class="loginBox">
+          <div class="loginBoxContainer">
+            <h2>Login</h2>
+            <form id="frmLoginUser">
+              <input type="text" name="txtUserName" placeholder="Username">
+              <input type="password" name="txtUserPassword" placeholder="Password">
+              <button type="button" id="btnLoginUser">Login</button>
+            </form>
+          </div>
+        </div>
+
+    </div>
+
+
+    <script>
       /******  Sidebar ******/
       burgerMenu.addEventListener("click", function(){
         var sidebar = document.querySelector(".sidebar");
@@ -116,6 +129,5 @@
 
     </script>
 
->>>>>>> e510fd2e6425d493c74bb24866ece14b2b90611e
   </body>
 </html>

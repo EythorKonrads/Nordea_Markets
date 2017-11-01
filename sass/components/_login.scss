@@ -1,0 +1,67 @@
+.login{
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  background-image:  url('.././img/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &:before{
+    content: '';
+    position: absolute;
+    background: $loginOverlay;
+    width: 100%;
+    height:100%;
+  }
+}
+.loginBox{
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  // max-width: 50vw;
+  // max-height: 50vh;
+  max-height: 300px;
+  max-width: 330px;
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+  top: calc(50vh - 25vh);
+  // left: calc(50vw - 25vw);
+  border: 1px solid #979797;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+}
+#frmLoginUser{
+  display: flex;
+  flex-direction: column;
+  input{
+    height: 40px;
+    margin-bottom: 20px;
+    padding:5px 0 5px 10px;
+    font-size: 14px;
+    border: 1px solid rgba(195,206,215,0.44);
+  }
+}
+.loginBoxContainer{
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+}
+#btnLoginUser{
+  background: $btnYesColor;
+  height:40px;
+  border: 0;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
