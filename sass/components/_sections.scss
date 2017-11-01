@@ -1,0 +1,72 @@
+// Article Cards
+
+.articles-container {
+	width: 90%;
+	max-width: 975px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-row-gap: 2rem;
+}
+
+
+.card {
+	background-color: $backgroundColor;
+	text-decoration: none;
+	color: $txtParagraphColor;
+	border: $cardBoxShadow;
+	display: flex;
+	flex-direction: row;
+	min-height: 100%;
+	position: relative;
+	top: 0;
+	transition: all 0.1s ease-in;
+
+	&:hover {
+		// top: -2;
+		box-shadow: $cardHooverBoxShadow;
+	}
+}
+
+.card .article-thumb-left {
+	width: 200px;
+    height: auto;
+    padding: 0px 50px;
+    margin: 43px 29px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.card .card-inner-right{
+	padding: 20px 35px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	p {
+		width: 92%;
+	}
+
+}
+
+.article-header {
+	display: flex;
+	margin: 18px 0;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+
+	h2 {
+		font-size: $articleH2;
+		font-weight: $articleH2Weight;
+	}
+
+	span {
+		font-size: 16px;
+		color: #9AA0A7;
+	}
+}
+
+
+
+

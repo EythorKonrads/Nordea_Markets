@@ -74,35 +74,37 @@
 
 
 .container{
-  width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: calc(100% - 100px);
+  margin: 0 auto;
 }
-@media screen and (max-width: 1000px){
+
+@media screen and (max-width: 900px){
   .container{
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
+    width: calc(100% - 50px);
+    // width: 100%;
+    // max-width: 600px;
+    // margin: 0 auto;
   }
-
 }
 
+
+
+
+
+.articles-container{
+  width: 100% !important;
+  max-width: none!important;
+  .card{
+    width: 100% !important;
+  }
+}
 
 
 /* chart */
 
-// .chart{
-//   position: relative!important;
-//   padding-bottom: 20px!important;
-//   width: 100%!important;
-// }
-//
 #chartContainer{
   width: 100% !important;
-  // width: calc(100% - 300px)!important;
-  // margin: 0 auto!important;
-  // flex-direction: column!important;
-  // align-items: center!important;
+
 }
 
 
@@ -125,8 +127,54 @@
 }
 
 .line{
-  width: calc(100% - 15px) ;
+  width: calc(100% - 15px);
   height:2px;
-  background: red;
-  // padding: 0px 20px;
+  background: $mainBlue;
+  margin: 70px 0px;
+}
+
+
+
+@media screen and (max-width: 600px){
+
+  .container{
+    width: 100%!important;
+    margin: 0 auto;
+  }
+
+  .autherBoxImage{
+    display: none;
+  }
+
+  .articles-container{
+    .card{
+      flex-direction: column!important;
+      .article-thumb-left{
+        padding: 0!important;
+        margin: 0!important;
+        width: 100%!important;
+        height: 200px!important;
+      }
+    }
+  }
+
+  .filter{
+    justify-content: center;
+    .filterBox{
+      flex-direction: column;
+      #btnCompareArticle, #btnCompareDate{
+        margin-right: 0px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .line {
+      width:100%;
+      margin: 40px 0px;
+  }
+
 }

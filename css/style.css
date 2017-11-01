@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -40,6 +41,11 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.35; }
 
 /******************  Desktop HEADER   *********************/
 .header {
@@ -135,6 +141,57 @@ table {
   right: 0px;
   top: 0px;
   transition: right .3s ease; }
+
+.articles-container {
+  width: 90%;
+  max-width: 975px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 2rem; }
+
+.card {
+  background-color: #fff;
+  text-decoration: none;
+  color: #1A2834;
+  border: 1px solid #E2E5E8;
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in; }
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card .article-thumb-left {
+  width: 200px;
+  height: auto;
+  padding: 0px 50px;
+  margin: 43px 29px;
+  background-size: cover;
+  background-position: center center; }
+
+.card .card-inner-right {
+  padding: 20px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .card .card-inner-right p {
+    width: 92%; }
+
+.article-header {
+  display: flex;
+  margin: 18px 0;
+  justify-content: space-between;
+  flex-direction: row-reverse; }
+  .article-header h2 {
+    font-size: 20px;
+    font-weight: 600; }
+  .article-header span {
+    font-size: 16px;
+    color: #9AA0A7; }
 
 body {
   background-color: whitesmoke; }
@@ -296,15 +353,18 @@ button:focus {
 
 /* */
 .container {
-  width: 100%;
-  max-width: 1200px;
+  width: calc(100% - 100px);
   margin: 0 auto; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .container {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto; } }
+    width: calc(100% - 50px); } }
+.articles-container {
+  width: 100% !important;
+  max-width: none !important; }
+  .articles-container .card {
+    width: 100% !important; }
+
 /* chart */
 #chartContainer {
   width: 100% !important; }
@@ -328,6 +388,38 @@ button:focus {
 .line {
   width: calc(100% - 15px);
   height: 2px;
-  background: red; }
+  background: #0020A4;
+  margin: 70px 0px; }
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100% !important;
+    margin: 0 auto; }
+
+  .autherBoxImage {
+    display: none; }
+
+  .articles-container .card {
+    flex-direction: column !important; }
+    .articles-container .card .article-thumb-left {
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+      height: 200px !important; }
+
+  .filter {
+    justify-content: center; }
+    .filter .filterBox {
+      flex-direction: column; }
+      .filter .filterBox #btnCompareArticle, .filter .filterBox #btnCompareDate {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+
+  .line {
+    width: 100%;
+    margin: 40px 0px; } }
 
 /*# sourceMappingURL=style.css.map */
