@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,6 +47,36 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   line-height: 1.35; }
+
+.h1-page-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 40px auto; }
+
+.search-box {
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 50px; }
+
+.search-box input#article-search {
+  height: 60px;
+  width: 625px;
+  border: 1px solid rgba(195, 206, 215, 0.44);
+  font-size: 16px;
+  font-weight: 600;
+  float: left;
+  color: #1A2834;
+  padding-left: 16px; }
+
+.search-box input#article-search::-webkit-input-placeholder {
+  color: #5F5F5F; }
+
+.search-box .icon {
+  position: relative;
+  font-size: 18px;
+  line-height: 3.9;
+  left: -50px;
+  color: #5F5F5F; }
 
 /******************  Desktop HEADER   *********************/
 .header {
@@ -188,17 +219,10 @@ body {
   margin: 18px 0;
   justify-content: space-between;
   flex-direction: row-reverse; }
-<<<<<<< HEAD
-=======
-  .article-header h2 {
-    font-size: 20px;
-    font-weight: 600; }
->>>>>>> 60741ef63c8c51798366843a705d0d0fb02a3726
   .article-header span {
     font-size: 16px;
     color: #9AA0A7; }
 
-<<<<<<< HEAD
 .article-title {
   font-size: 20px;
   font-weight: 600; }
@@ -223,8 +247,6 @@ body {
       float: left;
       margin: 5px 40px 10px 0; }
 
-=======
->>>>>>> 60741ef63c8c51798366843a705d0d0fb02a3726
 body {
   background-color: whitesmoke; }
 
@@ -323,8 +345,6 @@ button:focus {
   color: white;
   font-size: 18px;
   margin-bottom: 20px; }
-<<<<<<< HEAD
-=======
 
 .auther {
   display: flex;
@@ -455,6 +475,5 @@ button:focus {
   .line {
     width: 100%;
     margin: 40px 0px; } }
->>>>>>> 60741ef63c8c51798366843a705d0d0fb02a3726
 
 /*# sourceMappingURL=style.css.map */
