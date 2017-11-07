@@ -1,3 +1,7 @@
+body{
+  background: white!important;
+}
+
 .auther{
   display: flex;
   margin-top: 50px;
@@ -10,12 +14,11 @@
   flex-direction: row;
   align-items: end;
   .autherBoxImage{
-    background-image:  url('.././img/JaneDoe.png');
+    background-image:  url('.././img/jane.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    padding: 10px;
-    padding-top: 0px;
+    background-size: cover;
+    padding-top: 70px;
     max-height:180px;
     height: 100%;
     width: 100%;
@@ -70,7 +73,12 @@
   }
 }
 
-/* */
+/* Card */
+
+.card .article-thumb-left{
+      padding: 50px 90px!important;
+      margin: 0!important;
+}
 
 
 .container{
@@ -116,14 +124,14 @@
   position: relative;
   display: inline-block;
   margin-top: 0.8em;
-  width: 1em;
-  height: 1em;
-  border-top: 0.2em solid #B4B4B4;
-  border-right: 0.2em solid #B4B4B4;
+  width: 0.9em;
+  height: 0.9em;
+  border-top: 0.1em solid #B4B4B4;
+  border-right: 0.1em solid #B4B4B4;
   -moz-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 .line{
@@ -145,6 +153,12 @@
   .autherBoxImage{
     display: none;
   }
+  #iChartVisitors{
+    display: none;
+  }
+  .btnShowChart:nth-last-child(1){
+    display: none;
+  }
 
   .articles-container{
     .card{
@@ -162,6 +176,7 @@
     justify-content: center;
     .filterBox{
       flex-direction: column;
+      width: 100%;
       #btnCompareArticle, #btnCompareDate{
         margin-right: 0px;
         margin-bottom: 20px;
