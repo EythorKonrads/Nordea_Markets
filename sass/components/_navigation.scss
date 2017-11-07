@@ -86,7 +86,7 @@
   position: absolute;
   top: 15px;
   width: 30px;
-  left: 10px;
+  right: 10px;
 }
 .userMenuNav{
   position: absolute;
@@ -108,4 +108,23 @@
   right: 0px;
   top: 0px;
   transition: right .3s ease;
+}
+
+@media screen and (max-width: 500px){
+  .activeUserNav{
+    height: auto;
+    width: 100%;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    bottom: 0;
+  }
+  .active {
+      top: 0px;
+      left: 0px;
+      width:100%;
+      bottom: 0;
+      position: fixed;
+      height: auto;
+  }
 }
