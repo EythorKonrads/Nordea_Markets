@@ -26,3 +26,19 @@
     left: -50px;
     color: $txtFilterColor;
 }
+
+.btn-close {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.btn-close:after {
+    content: 'x';
+    color: $txtTitleColor;
+    font-weight: 300;
+    // font-family: Arial, sans-serif;
+    font-size: 3rem;
+    position: absolute;
+    top: 4%;
+}
