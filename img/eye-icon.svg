@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>eye</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-576.000000, -503.000000)" fill-rule="nonzero">
+            <g id="eye" transform="translate(576.000000, 503.000000)">
+                <circle id="Oval" fill="#FBD303" cx="16" cy="16" r="16"></circle>
+                <path d="M16.0000313,24 C22.0467224,24 27.4356584,21.0946143 31,16.5 C27.4356584,11.9279034 22.0466598,9 16.0000313,9 C9.95340276,9 4.56434157,11.9279034 1,16.5 C4.56434157,21.0720302 9.95334019,24 16.0000313,24 Z" id="Shape" fill="#FCFCFD"></path>
+                <circle id="Oval" fill="#6EB1E1" cx="15.5" cy="15.5" r="6.5"></circle>
+                <circle id="Oval" fill="#646B79" cx="15" cy="15" r="4"></circle>
+                <g id="Group" transform="translate(13.000000, 13.000000)" fill="#FCFCFD">
+                    <ellipse id="Oval" cx="3.5099802" cy="1.52044828" rx="1.6919901" ry="1.47319828"></ellipse>
+                    <path d="M3.5099802,6.98358621 C4.9199604,6.98358621 6.1889703,6.41067241 6.9880099,5.51038793 C6.5180396,4.22130172 5.13148515,3.28010345 3.5099802,3.28010345 C1.88847525,3.28010345 0.47849505,4.22130172 0.031950495,5.51038793 C0.830920792,6.41067241 2.09993069,6.98358621 3.5099802,6.98358621 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
