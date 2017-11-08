@@ -1,0 +1,28 @@
+// Search
+.search-box{
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.search-box input#article-search {
+    height: 60px;
+    width: 625px;
+    border: $filterBorderColor;
+    font-size: 16px;
+    font-weight: 600;
+    float: left;
+    color: $txtParagraphColor;
+    padding-left: 16px;
+}
+
+.search-box input#article-search::-webkit-input-placeholder {
+    color: $txtFilterColor;
+}
+
+.search-box .icon {
+    position: relative;
+    font-size: 18px;
+    line-height: 3.9;
+    left: -50px;
+    color: $txtFilterColor;
+}

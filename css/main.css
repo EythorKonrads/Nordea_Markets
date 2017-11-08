@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,10 +43,43 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+a {
+  text-decoration: none; }
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   line-height: 1.35; }
+
+.h1-page-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 40px auto; }
+
+.search-box {
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 50px; }
+
+.search-box input#article-search {
+  height: 60px;
+  width: 625px;
+  border: 1px solid rgba(195, 206, 215, 0.44);
+  font-size: 16px;
+  font-weight: 600;
+  float: left;
+  color: #1A2834;
+  padding-left: 16px; }
+
+.search-box input#article-search::-webkit-input-placeholder {
+  color: #5F5F5F; }
+
+.search-box .icon {
+  position: relative;
+  font-size: 18px;
+  line-height: 3.9;
+  left: -50px;
+  color: #5F5F5F; }
 
 /******************  Desktop HEADER   *********************/
 .header {
@@ -77,7 +111,8 @@ body {
   top: 0px;
   left: 0px;
   width: 20px;
-  position: absolute;
+  z-index: 2;
+  position: fixed;
   transition: 0.5s;
   width: 250px;
   height: 100vh;
@@ -121,13 +156,14 @@ body {
   position: absolute;
   top: 15px;
   width: 30px;
-  left: 10px; }
+  right: 10px; }
 
 .userMenuNav {
   position: absolute;
   top: -300px;
   right: -200px;
   width: 0px;
+  z-index: 1;
   height: 300px;
   overflow: hidden;
   background: #0020A4;
@@ -142,6 +178,22 @@ body {
   top: 0px;
   transition: right .3s ease; }
 
+@media screen and (max-width: 500px) {
+  .activeUserNav {
+    height: auto;
+    width: 100%;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    bottom: 0; }
+
+  .active {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    height: auto; } }
 .articles-container {
   width: 90%;
   max-width: 975px;
@@ -186,12 +238,33 @@ body {
   margin: 18px 0;
   justify-content: space-between;
   flex-direction: row-reverse; }
-  .article-header h2 {
-    font-size: 20px;
-    font-weight: 600; }
   .article-header span {
     font-size: 16px;
     color: #9AA0A7; }
+
+.article-title {
+  font-size: 20px;
+  font-weight: 600; }
+
+.blue-line {
+  box-sizing: border-box;
+  background-color: #0020A4;
+  height: 2px;
+  width: 944px;
+  margin: 60px 0; }
+
+.article-container {
+  width: 90%;
+  max-width: 975px;
+  margin: 0 auto; }
+  .article-container article {
+    margin-top: 10px; }
+    .article-container article h2 {
+      margin: 35px 0; }
+    .article-container article .article-image {
+      width: 200px;
+      float: left;
+      margin: 5px 40px 10px 0; }
 
 body {
   background-color: whitesmoke; }
@@ -292,184 +365,515 @@ button:focus {
   font-size: 18px;
   margin-bottom: 20px; }
 
+/**************************  MAIN CONTANIER DASH BOARD  ****************************/
 #dashBoardContainer {
   display: flex;
   margin: 0 auto;
   flex-direction: column;
   max-width: 1000px; }
-  #dashBoardContainer .cChart {
-    display: none; }
-  #dashBoardContainer .displayChart {
-    display: flex;
-    z-index: 1;
-    background-color: white;
-    padding: 10px;
-    margin-top: 1px; }
-  #dashBoardContainer #iTopDashBoard {
-    flex-direction: row;
-    display: flex;
-    padding: 50px 0; }
-    #dashBoardContainer #iTopDashBoard .chartButtons {
-      flex-direction: column;
-      margin-right: 50px; }
-      #dashBoardContainer #iTopDashBoard .chartButtons #btnClickRate {
-        background-color: #36A2EB; }
-      #dashBoardContainer #iTopDashBoard .chartButtons #btnSession {
-        background-color: #FA6384; }
-      #dashBoardContainer #iTopDashBoard .chartButtons #btnBounceRate {
-        background-color: #FFA24E; }
-      #dashBoardContainer #iTopDashBoard .chartButtons .btnShowChart {
-        height: 100px;
-        width: 100px;
-        color: white; }
-    #dashBoardContainer #iTopDashBoard #iChartClickRate, #dashBoardContainer #iTopDashBoard #iChartSession, #dashBoardContainer #iTopDashBoard #iChartBounceRate {
-      width: 804px; }
-  #dashBoardContainer #iBottomDashBoard {
-    display: flex;
-    height: auto;
-    width: 100%; }
-    #dashBoardContainer #iBottomDashBoard #iChartReaders {
-      box-sizing: border-box;
-      height: auto;
-      width: 50%;
-      border: 1px solid #D1D1D1;
-      background-color: #FAFAFA;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      #dashBoardContainer #iBottomDashBoard #iChartReaders h2 {
-        color: black; }
-    #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer {
-      display: flex;
-      flex-wrap: wrap;
-      width: 50%; }
-      #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer .box {
-        box-sizing: border-box;
-        height: 250px;
-        width: 250px;
-        border: 1px solid #D1D1D1;
-        background-color: #FAFAFA;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; }
-        #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer .box h2 {
-          color: black;
-          width: 100px;
-          margin-top: 33px; }
-        #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer .box h4 {
-          height: 60px;
-          width: 92px;
-          color: #454545;
-          font-family: "Source Sans Pro";
-          font-size: 48px;
-          line-height: 60px;
-          text-align: center; }
-        #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer .box p {
-          max-width: 140px;
-          text-align: center;
-          flex-grow: 1; }
-        #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer .box .box-data {
-          display: flex;
-          align-items: center;
-          margin: 20px 0 20px 0; }
-        #dashBoardContainer #iBottomDashBoard .dashBoardBoxContainer .box .icon {
-          height: 32px;
-          width: 32px;
-          background-color: #FBD303; }
-  #dashBoardContainer #quoteBanner {
-    height: 256px;
-    width: auto;
-    background-color: #FF6385;
-    align-items: center;
+
+/**************************  GRAF X 4  ****************************/
+.cChart {
+  display: none; }
+
+.displayChart {
+  display: flex;
+  z-index: 1;
+  background-color: white;
+  padding: 10px;
+  margin-top: 1px; }
+
+#iTopDashBoard {
+  flex-direction: row;
+  display: flex;
+  padding: 50px 0; }
+
+.chartButtons {
+  flex-direction: column;
+  margin-right: 50px; }
+
+#btnClickRate {
+  background-color: #36A2EB; }
+
+#btnSession {
+  background-color: #FA6384; }
+
+#btnBounceRate {
+  background-color: #FFA24E; }
+
+.btnShowChart {
+  height: 100px;
+  width: 100px;
+  color: white; }
+
+#iChartClickRate, #iChartSession, #iChartBounceRate {
+  width: 804px; }
+
+/**************************  DOUGHNUT AND STATS  ****************************/
+#iBottomDashBoard {
+  display: flex;
+  height: auto;
+  width: 100%; }
+
+#iChartReaders {
+  box-sizing: border-box;
+  height: auto;
+  width: 50%;
+  border: 1px solid #D1D1D1;
+  background-color: #FAFAFA;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #iChartReaders h2 {
+    color: black;
+    width: 100px;
+    margin-top: 33px;
+    color: black;
+    font-family: "Source Sans Pro";
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 45px;
+    text-align: center; }
+
+.dashBoardBoxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%; }
+  .dashBoardBoxContainer .box {
+    box-sizing: border-box;
+    height: 250px;
+    width: 250px;
+    border: 1px solid #D1D1D1;
+    background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center; }
-    #dashBoardContainer #quoteBanner h2 {
-      height: 45px;
-      width: 861px;
-      color: #FFFFFF;
-      font-family: "Source Sans Pro";
-      font-size: 30px;
-      font-style: italic;
-      font-weight: 300;
-      line-height: 45px;
-      text-align: center; }
-    #dashBoardContainer #quoteBanner h3 {
-      height: 31px;
-      width: 201px;
-      color: #FFFFFF;
-      font-family: "Source Sans Pro";
-      font-size: 20px;
-      font-style: italic;
-      font-weight: 300;
-      line-height: 31px;
-      text-align: center; }
-  #dashBoardContainer .iCarouselArticles {
-    padding: 70px 0px;
-    position: relative; }
-    #dashBoardContainer .iCarouselArticles h2 {
+    .dashBoardBoxContainer .box h2 {
+      width: 100px;
+      margin-top: 33px;
       color: black;
       font-family: "Source Sans Pro";
       font-size: 30px;
       font-style: italic;
       font-weight: 300;
       line-height: 45px;
+      text-align: center; }
+    .dashBoardBoxContainer .box h4 {
+      height: 60px;
+      width: 92px;
+      color: #454545;
+      font-family: "Source Sans Pro";
+      font-size: 48px;
+      line-height: 60px;
+      text-align: center; }
+    .dashBoardBoxContainer .box p {
+      max-width: 140px;
       text-align: center;
-      margin-bottom: 30px; }
-  #dashBoardContainer .carousel__nav {
-    z-index: 10;
-    position: relative; }
-  #dashBoardContainer .carousel__button--prev, #dashBoardContainer .carousel__button--next {
-    top: 0;
-    bottom: 0; }
-  #dashBoardContainer .carousel__button--prev {
-    left: 0;
-    top: 170px;
-    position: absolute; }
-  #dashBoardContainer .carousel__button--next {
-    right: 0;
-    top: 170px;
-    position: absolute; }
-  #dashBoardContainer .carousel__container {
-    overflow: hidden;
-    height: 440px; }
-  #dashBoardContainer .carousel__list {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap; }
-  #dashBoardContainer .carousel__list.unwrap {
-    flex-wrap: nowrap; }
-  #dashBoardContainer .carousel__item {
-    /* 	max-width: 300px; */
-    text-align: center;
-    line-height: 100px;
-    border: 1px solid #fff; }
-    #dashBoardContainer .carousel__item .carousel-image {
+      flex-grow: 1; }
+    .dashBoardBoxContainer .box .box-data {
       display: flex;
-      flex-direction: column-reverse;
-      background-color: orange;
-      height: 440px;
-      width: 333px; }
-    #dashBoardContainer .carousel__item .carosel-textbox {
-      background-color: #1ABC9C;
-      height: 136px;
       align-items: center;
-      display: flex; }
-      #dashBoardContainer .carousel__item .carosel-textbox p {
-        line-height: 1.4;
-        padding: 20px;
-        color: #FFFFFF;
-        font-family: "Source Sans Pro";
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 31px;
-        text-align: center;
-        text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
-      #dashBoardContainer .carousel__item .carosel-textbox .carosel-textbox:hover {
-        background: #FF2400;
-        width: 320px;
-        height: 240px; }
+      margin: 20px 0 20px 0; }
+    .dashBoardBoxContainer .box .icon {
+      height: 32px;
+      width: 32px;
+      background-color: #FBD303; }
+
+/**************************  QUOTE BANNER  ****************************/
+#quoteBanner {
+  height: 256px;
+  width: auto;
+  background-color: #FF6385;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #quoteBanner h2 {
+    height: 45px;
+    width: 861px;
+    color: #FFFFFF;
+    font-family: "Source Sans Pro";
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 45px;
+    text-align: center; }
+  #quoteBanner h3 {
+    height: 31px;
+    width: 201px;
+    color: #FFFFFF;
+    font-family: "Source Sans Pro";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 31px;
+    text-align: center; }
+
+/**************************  CAROUSEL FOR ARTICLES  ****************************/
+.iCarouselArticles {
+  padding: 70px 0px;
+  position: relative; }
+  .iCarouselArticles h2 {
+    color: black;
+    font-family: "Source Sans Pro";
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 45px;
+    text-align: center;
+    margin-bottom: 30px; }
+
+.carousel__nav {
+  z-index: 10;
+  position: relative; }
+  .carousel__nav button {
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.carousel__button--prev, .carousel__button--next {
+  top: 0;
+  bottom: 0; }
+
+.carousel__button--prev {
+  left: 0;
+  top: 170px;
+  position: absolute; }
+
+.carousel__button--next {
+  right: 0;
+  top: 170px;
+  position: absolute; }
+
+.carousel__container {
+  overflow: hidden;
+  height: 440px; }
+
+.carousel__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; }
+
+.carousel__list.unwrap {
+  flex-wrap: nowrap; }
+
+.carousel__item {
+  text-align: center;
+  line-height: 100px;
+  border: 1px solid #fff; }
+
+.carousel-image {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: orange;
+  height: 440px;
+  width: 333px;
+  box-shadow: 0px 20px 50px -16px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 20px 50px -16px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 20px 50px -16px rgba(0, 0, 0, 0.5); }
+
+.carosel-textbox {
+  background-color: #1ABC9C;
+  height: 136px;
+  align-items: center;
+  display: flex; }
+  .carosel-textbox p {
+    line-height: 1.4;
+    padding: 20px;
+    color: #FFFFFF;
+    font-family: "Source Sans Pro";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31px;
+    text-align: center;
+    text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+  .carosel-textbox :hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+
+#iDashBoardFooter {
+  height: 300px;
+  width: 1000px;
+  background-color: #2B2B2B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+  #iDashBoardFooter p {
+    color: white;
+    max-width: 123px;
+    font-size: 14px;
+    text-align: center; }
+  #iDashBoardFooter h3 {
+    color: white;
+    max-width: 123px;
+    text-align: center; }
+
+.footer-icon {
+  height: 123px;
+  width: 123px;
+  background-color: #2D9EE7;
+  margin-top: 30px; }
+
+body {
+  background: white !important; }
+
+.auther {
+  display: flex;
+  margin-top: 50px; }
+
+.autherBox {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: end; }
+  .autherBox .autherBoxImage {
+    background-image: url(".././img/jane.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+    max-height: 180px;
+    height: 100%;
+    width: 100%; }
+
+.autherBoxInfo {
+  padding: 20px;
+  padding-top: 0px; }
+  .autherBoxInfo h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600; }
+  .autherBoxInfo p {
+    font-size: 18px; }
+  .autherBoxInfo p:nth-child(3) {
+    padding-top: 15px; }
+
+/* Filter */
+.filter {
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.filterBox {
+  display: flex;
+  flex-direction: row;
+  margin: 20px; }
+  .filterBox #btnCompareArticle, .filterBox #btnCompareDate {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid rgba(195, 206, 215, 0.44);
+    margin-right: 20px;
+    border-radius: 2px; }
+    .filterBox #btnCompareArticle a, .filterBox #btnCompareDate a {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 20px;
+      color: #5F5F5F;
+      white-space: nowrap; }
+
+/* Card */
+.card .article-thumb-left {
+  padding: 50px 90px !important;
+  margin: 0 !important; }
+
+.container {
+  width: calc(100% - 100px);
+  margin: 0 auto; }
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: calc(100% - 50px); } }
+.articles-container {
+  width: 100% !important;
+  max-width: none !important; }
+  .articles-container .card {
+    width: 100% !important; }
+
+/* chart */
+#chartContainer {
+  width: 100% !important; }
+
+/* filter arrow */
+.bottom {
+  content: '';
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  margin-top: 0.8em;
+  width: 0.9em;
+  height: 0.9em;
+  border-top: 0.1em solid #B4B4B4;
+  border-right: 0.1em solid #B4B4B4;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-right: 25px; }
+
+.line {
+  width: calc(100% - 15px);
+  height: 2px;
+  background: #0020A4;
+  margin: 70px 0px; }
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100% !important;
+    margin: 0 auto; }
+
+  .autherBoxImage {
+    display: none; }
+
+  #iChartVisitors {
+    display: none; }
+
+  .btnShowChart:nth-last-child(1) {
+    display: none; }
+
+  .articles-container .card {
+    flex-direction: column !important; }
+    .articles-container .card .article-thumb-left {
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+      height: 200px !important; }
+
+  .filter {
+    justify-content: center; }
+    .filter .filterBox {
+      flex-direction: column;
+      width: 100%; }
+      .filter .filterBox #btnCompareArticle, .filter .filterBox #btnCompareDate {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+
+  .line {
+    width: 100%;
+    margin: 40px 0px; } }
+.staff-search {
+  height: 100%;
+  margin: 0 5%; }
+
+.staff-search__container {
+  display: flex;
+  justify-content: center; }
+
+.staff-search__action-container {
+  margin: 0 0 40px 0;
+  max-width: 1015px;
+  width: 100%; }
+
+.staff-search__box {
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  height: 60px; }
+
+input.staff-search__searchbar {
+  width: 100%;
+  height: 60px;
+  font-size: 0.8em;
+  opacity: 1;
+  float: left;
+  padding-left: 20px;
+  border: 1px solid rgba(195, 206, 215, 0.44); }
+
+input .staff-search__searchbar {
+  color: #5F5F5F; }
+
+.staff-search__search-icon {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  margin-top: 17px;
+  z-index: 1; }
+  .staff-search__search-icon img {
+    width: 24px;
+    height: 24px;
+    color: rgba(195, 206, 215, 0.44); }
+
+.staff-search__box-container textarea:focus,
+.staff-search__box-container input:focus {
+  outline: none; }
+
+.search-results__container {
+  display: flex;
+  justify-content: center; }
+
+.search-results__item:hover {
+  background-color: tomato; }
+
+.search-results__item {
+  font-size: 18px;
+  height: 80px;
+  width: 100%;
+  max-width: 1015px;
+  padding: 0;
+  color: #1A2834;
+  margin-left: 15px;
+  border-bottom: 1px solid #dddddd;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start; }
+
+.search-results__item div {
+  line-height: 80px;
+  display: inline-block; }
+
+.search-results__img {
+  padding-left: 15px; }
+
+.search-results__img img {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: 10px; }
+
+.search-results__name {
+  font-weight: 600;
+  min-width: 350px;
+  padding-left: 20px; }
+
+.search-results__profession-name,
+.search-results__phone-number {
+  min-width: 150px; }
+
+.search-results__email {
+  color: #0020A4; }
+
+.search-results__profession-icon,
+.search-results__phone-icon,
+.search-results__email-icon {
+  position: relative;
+  float: left;
+  margin: 30px 10px 0 0; }
+
+.search-results__profession-icon {
+  background: url("../img/department.svg") no-repeat center;
+  width: 18px;
+  height: 19px; }
+
+.search-results__phone-icon {
+  background: url("../img/phone.svg") no-repeat;
+  width: 18px;
+  height: 19px; }
+
+.search-results__email-icon {
+  background: url("../img/mail.svg") no-repeat;
+  width: 27px;
+  height: 18px; }
+
+@media screen and (max-width: 900px) {
+  .staff-search {
+    margin: 0 5vw; }
+
+  .staff-search__action-container {
+    max-width: 90vw; } }
 
 /*# sourceMappingURL=main.css.map */

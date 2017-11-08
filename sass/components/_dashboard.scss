@@ -1,270 +1,325 @@
-#dashBoardContainer {
+/**************************  MAIN CONTANIER DASH BOARD  ****************************/
 
+#dashBoardContainer {
 	display: flex;
 	margin: 0 auto;
     flex-direction: column;
-    //align-items: center;
     max-width: 1000px;
+}
 
-	.cChart {
-		display: none;
-	}
+/**************************  GRAF X 4  ****************************/
 
- 	.displayChart {
-		display: flex;
-		z-index: 1;
-		background-color: white;
-		padding: 10px;
-		margin-top: 1px;
-	}
+.cChart {
+	display: none;
+}
 
-	#iTopDashBoard {
-		flex-direction: row;
-    	display: flex;
-    	padding: 50px 0;
+.displayChart {
+	display: flex;
+	z-index: 1;
+	background-color: white;
+	padding: 10px;
+	margin-top: 1px;
+}
 
-	    	.chartButtons {
-				flex-direction: column;
-				margin-right: 50px;
+#iTopDashBoard {
+	flex-direction: row;
+    display: flex;
+    padding: 50px 0;
+}
 
-				#btnClickRate {
-					background-color: #36A2EB;
-				}
+.chartButtons {
+	flex-direction: column;
+	margin-right: 50px;
+}	
 
-				#btnSession {
-					background-color: #FA6384;
-				}
+#btnClickRate {
+	background-color: #36A2EB;
+}
 
-				#btnBounceRate {
-					background-color: #FFA24E;
-				}
+#btnSession {
+	background-color: #FA6384;
+}
 
-				.btnShowChart{
-					height: 100px;
-		    		width: 100px;
-					color: white;
-				}
-			}	
+#btnBounceRate {
+	background-color: #FFA24E;
+}
 
-		#iChartClickRate, #iChartSession, #iChartBounceRate {
-			//height: 236px;	
-			width: 804px;
-		}
+.btnShowChart{
+	height: 100px;
+	width: 100px;
+	color: white;
+}
 
-	}
+#iChartClickRate, #iChartSession, #iChartBounceRate {	
+	width: 804px;
+}
 
-	#iBottomDashBoard {
-	    display: flex;
-	    height: auto;
-    	width: 100%;
+/**************************  DOUGHNUT AND STATS  ****************************/
 
-	    	#iChartReaders {	
-				box-sizing: border-box;	
-    			height: auto;
-    			width: 50%;	
-				border: 1px solid #D1D1D1;	
-				background-color: #FAFAFA;
-				align-items: center;
-    			display: flex;
-    			flex-direction: column;
-    			justify-content: center;
+#iBottomDashBoard {
+	display: flex;
+	height: auto;
+   	width: 100%;
+}
 
-    			h2 {
-    				color: black;
-    			}
-			}
-
-	    	.dashBoardBoxContainer {	
-    			display: flex;
-    			flex-wrap: wrap;
-    			width: 50%;
-    	
-				.box {		
-					box-sizing: border-box;	
-    				height: 250px;
-    				width: 250px;	
-					border: 1px solid #D1D1D1;	
-					background-color: #FAFAFA;
-					display: flex;
-    				flex-direction: column;
-    				align-items: center;
-    				justify-content: center;
-
-					h2 {
-    					color: black;
-    					width: 100px;
-    					margin-top: 33px;
-    				}
-
-    				h4 {
-    					height: 60px;	
-    					width: 92px;	
-    					color: #454545;	
-    					font-family: "Source Sans Pro";	
-    					font-size: 48px;	
-    					//font-weight: 300;	
-    					line-height: 60px;	
-    					text-align: center;
-    				}
-
-    				p {
-    					max-width: 140px;
-    					text-align: center;
-    					flex-grow: 1;
-    				}
-
-    				.box-data {
-    					display: flex;
-    					align-items: center;
-    					    margin: 20px 0 20px 0;
-    				}
-
-    				.icon {
-    					height: 32px;	
-    					width: 32px;	
-    					background-color: #FBD303;
-    				}
-				}
-			}
-	}
-
-	#quoteBanner {	
-		height: 256px;	
-		width: auto;	
-		background-color: #FF6385;
-		align-items: center;
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: center;
+#iChartReaders {	
+	box-sizing: border-box;	
+    height: auto;
+    width: 50%;	
+    border: 1px solid #D1D1D1;	
+	background-color: #FAFAFA;
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     	h2 {
-			height: 45px;	
-			width: 861px;	
-			color: #FFFFFF;	
+    		color: black;
+    		width: 100px;
+    		margin-top: 33px;
+    		color: black;
 			font-family: "Source Sans Pro";	
 			font-size: 30px;	
 			font-style: italic;	
 			font-weight: 300;	
 			line-height: 45px;	
 			text-align: center;
-		}
+    	}
+}
 
-		h3 {
-			height: 31px;	
-			width: 201px;	
-			color: #FFFFFF;	
-			font-family: "Source Sans Pro";	
-			font-size: 20px;	
-			font-style: italic;	font-weight: 300;	
-			line-height: 31px;	
-			text-align: center;
-		}
-	}
-
-
-
-
-	.iCarouselArticles{
-		padding: 70px 0px;
-		position:relative;
-
-		h2 {
-			color: black;
-			font-family: "Source Sans Pro";	
-			font-size: 30px;	
-			font-style: italic;	
-			font-weight: 300;	
-			line-height: 45px;	
-			text-align: center;
-			margin-bottom: 30px;
-		}
-	}
-
-	.carousel__nav {
-		z-index: 10;
-    	position: relative;
-	}
-
-
-	.carousel__button--prev, .carousel__button--next{
-		//position: absolute;
-		top: 0;
-		bottom: 0;
-	}
-
-	.carousel__button--prev{
-		left: 0;
-	    top: 170px;
-	    position: absolute;
-	}
-
-	.carousel__button--next{
-	    right: 0;
-	    top: 170px;
-	    position: absolute;
-	}
-		
-	.carousel__container {
-		overflow: hidden;
-		height: 440px;
-	}
-	
-	.carousel__list{
-		position: relative;
+.dashBoardBoxContainer {	
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    	
+	.box {		
+		box-sizing: border-box;	
+    	height: 250px;
+    	width: 250px;	
+		border: 1px solid #D1D1D1;	
+		background-color: #FAFAFA;
 		display: flex;
-		flex-wrap: wrap;
-	}
-	
-	.carousel__list.unwrap{
-		flex-wrap: nowrap;
-	}
-	
-	.carousel__item{
-		//flex: 1 0 250px;
-	/* 	max-width: 300px; */
-		//height: 200px;
-		//background-color: #ccc;
-		text-align: center;
-		line-height: 100px;
-		border: 1px solid #fff;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
 
-		.carousel-image {
-			display: flex;
-			flex-direction: column-reverse;
-			
-
-			background-color: orange;
-			height: 440px;	
-			width: 333px;
-		}
-
-		.carosel-textbox {
-			background-color: #1ABC9C;
-    		height: 136px;
-    		align-items: center;
-    		display: flex;
-
-    		p {
-    			line-height: 1.4;
-				padding: 20px;	
-    			color: #FFFFFF;	
-    			font-family: "Source Sans Pro";	
-    			font-size: 24px;	
-    			font-weight: 600;	
-    			line-height: 31px;	
-    			text-align: center;	
-    			text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+			h2 {
+    			width: 100px;
+    			margin-top: 33px;
+    			color: black;
+				font-family: "Source Sans Pro";	
+				font-size: 30px;	
+				font-style: italic;	
+				font-weight: 300;	
+				line-height: 45px;	
+				text-align: center;
     		}
 
-    		.carosel-textbox:hover {
-				background:#FF2400;
-				width:320px;
-				height:240px;
-			}
-		}
+    		h4 {
+    			height: 60px;	
+    			width: 92px;	
+    			color: #454545;	
+    			font-family: "Source Sans Pro";	
+    			font-size: 48px;	
+    			line-height: 60px;	
+    			text-align: center;
+    		}
 
+    		p {
+    			max-width: 140px;
+    			text-align: center;
+    			flex-grow: 1;
+    		}
+
+    		.box-data {
+    			display: flex;
+    			align-items: center;
+    			margin: 20px 0 20px 0;
+			}
+
+    		.icon {
+    			height: 32px;	
+    			width: 32px;	
+    			background-color: #FBD303;
+    		}
 	}
 }
+
+
+/**************************  QUOTE BANNER  ****************************/
+
+#quoteBanner {	
+	height: 256px;	
+	width: auto;	
+	background-color: #FF6385;
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+		height: 45px;	
+		width: 861px;	
+		color: #FFFFFF;	
+		font-family: "Source Sans Pro";	
+		font-size: 30px;	
+		font-style: italic;	
+		font-weight: 300;	
+		line-height: 45px;	
+		text-align: center;
+	}
+
+	h3 {
+		height: 31px;	
+		width: 201px;	
+		color: #FFFFFF;	
+		font-family: "Source Sans Pro";	
+		font-size: 20px;	
+		font-style: italic;	font-weight: 300;	
+		line-height: 31px;	
+		text-align: center;
+	}
+}
+
+/**************************  CAROUSEL FOR ARTICLES  ****************************/
+
+
+.iCarouselArticles{
+	padding: 70px 0px;
+	position:relative;
+
+	h2 {
+		color: black;
+		font-family: "Source Sans Pro";	
+		font-size: 30px;	
+		font-style: italic;	
+		font-weight: 300;	
+		line-height: 45px;	
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}
+
+.carousel__nav {
+	z-index: 10;
+    position: relative;
+
+    button {
+    	background-color: rgba(0,0,0,0.8);
+    	//opacity: 0.5;
+    }
+}
+
+.carousel__button--prev, .carousel__button--next{
+	top: 0;
+	bottom: 0;
+}
+
+.carousel__button--prev{
+	left: 0;
+	top: 170px;
+	position: absolute;
+}
+
+.carousel__button--next{
+	right: 0;
+	top: 170px;
+	position: absolute;
+}
+		
+.carousel__container {
+	overflow: hidden;
+	height: 440px;
+}
+	
+.carousel__list{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+	
+.carousel__list.unwrap{
+	flex-wrap: nowrap;
+}
+	
+.carousel__item{
+	text-align: center;
+	line-height: 100px;
+	border: 1px solid #fff;
+}
+
+.carousel-image {
+	display: flex;
+	flex-direction: column-reverse;
+	background-color: orange;
+	height: 440px;	
+	width: 333px;
+	box-shadow: 0px 20px 50px -16px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0px 20px 50px -16px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 20px 50px -16px rgba(0,0,0,0.5);
+}
+
+
+.carosel-textbox {
+	background-color: #1ABC9C;
+    height: 136px;
+    align-items: center;
+    display: flex;
+
+
+    	p {
+    		line-height: 1.4;
+			padding: 20px;	
+    		color: #FFFFFF;	
+    		font-family: "Source Sans Pro";	
+    		font-size: 24px;	
+    		font-weight: 600;	
+    		line-height: 31px;	
+    		text-align: center;	
+    		text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    	}
+
+    	:hover {
+    			background-color: rgba(0,0,0,0.5);
+    			//opacity: 0.3;
+    	}
+} 
+
+.carosel-textbox:hover {
+	//background:black ;
+	// opacity: 0.3;
+}
+
+#iDashBoardFooter {
+	height: 300px;	
+	width: 1000px;	
+	background-color: #2B2B2B;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+	p {
+		color: white;
+		max-width: 123px;
+		font-size: 14px;
+    	text-align: center;
+	}
+
+	h3 {
+		color: white;
+		max-width: 123px;
+		text-align: center;
+	}
+}
+
+.footer-icon {
+	height: 123px;	
+	width: 123px;	
+	background-color: #2D9EE7;
+	margin-top: 30px;
+}
+
+
 
 
 

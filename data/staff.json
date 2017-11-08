@@ -1,0 +1,13 @@
+{
+    "staff":[
+      {"imagePath":"https://previews.123rf.com/images/dolgachov/dolgachov1604/dolgachov160401830/54866413-people-business-female-and-portrait-concept-happy-smiling-young-woman-face-Stock-Photo.jpg", "name":"John Doe", "title":"Verkefnastjóri", "phoneNumber":"514 9032", "email":"jhondoe@tskoli.is", "selection":"Byggingartækniskólinn"},
+      {"imagePath":"http://www.visiontimes.com/uploads/2014/02/loneliness-05-Andrew-John-RothFlickr-537x550.jpg", "name":"Anna Smith", "title":"Vefstjóri", "phoneNumber":"514 9033", "email":"annasmith@tskoli.is", "selection":"Byggingartækniskólinn"},
+      {"imagePath":"https://s-media-cache-ak0.pinimg.com/originals/ba/5f/48/ba5f48e4479ad8152f7257e3c61c5478.jpg", "name":"Guðmundur Bjarni Sigurðsson", "title":"Skólastjóri", "phoneNumber":"514 9034", "email":"peterjones@tskoli.is", "selection":"raungreinar"},
+      {"imagePath":"https://previews.123rf.com/images/dolgachov/dolgachov1604/dolgachov160401830/54866413-people-business-female-and-portrait-concept-happy-smiling-young-woman-face-Stock-Photo.jpg", "name":"John Doe", "title":"Verkefnastjóri", "phoneNumber":"514 9032", "email":"jhondoe@tskoli.is", "selection":"Byggingartækniskólinn"},
+      {"imagePath":"http://www.visiontimes.com/uploads/2014/02/loneliness-05-Andrew-John-RothFlickr-537x550.jpg", "name":"Anna Smith", "title":"Vefstjóri", "phoneNumber":"514 9033", "email":"annasmith@tskoli.is", "selection":"Byggingartækniskólinn"},
+      {"imagePath":"https://s-media-cache-ak0.pinimg.com/originals/ba/5f/48/ba5f48e4479ad8152f7257e3c61c5478.jpg", "name":"Guðmundur Bjarni Sigurðsson", "title":"Skólastjóri", "phoneNumber":"514 9034", "email":"peterjones@tskoli.is", "selection":"raungreinar"},
+      {"imagePath":"https://previews.123rf.com/images/dolgachov/dolgachov1604/dolgachov160401830/54866413-people-business-female-and-portrait-concept-happy-smiling-young-woman-face-Stock-Photo.jpg", "name":"John Doe", "title":"Verkefnastjóri", "phoneNumber":"514 9032", "email":"jhondoe@tskoli.is", "selection":"Byggingartækniskólinn"},
+      {"imagePath":"http://www.visiontimes.com/uploads/2014/02/loneliness-05-Andrew-John-RothFlickr-537x550.jpg", "name":"Anna Smith", "title":"Vefstjóri", "phoneNumber":"514 9033", "email":"annasmith@tskoli.is", "selection":"Byggingartækniskólinn"},
+      {"imagePath":"https://s-media-cache-ak0.pinimg.com/originals/ba/5f/48/ba5f48e4479ad8152f7257e3c61c5478.jpg", "name":"Guðmundur Bjarni Sigurðsson", "title":"Skólastjóri", "phoneNumber":"514 9034", "email":"peterjones@tskoli.is", "selection":"raungreinar"}
+    ]
+   }

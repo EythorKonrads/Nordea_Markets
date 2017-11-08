@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="26px" viewBox="0 0 24 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>378 - Search (Outline)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012" stroke-linejoin="round">
+        <g id="search-bar" transform="translate(-580.000000, -17.000000)" stroke="#1A1718">
+            <g id="Search" transform="translate(581.156716, 18.000000)">
+                <g id="Search-Icon">
+                    <path d="M17.1428571,9.41176471 C17.1428571,14.6098824 13.3054286,18.8235294 8.57142857,18.8235294 C3.83742857,18.8235294 0,14.6098824 0,9.41176471 C0,4.21364706 3.83742857,0 8.57142857,0 C13.3054286,0 17.1428571,4.21364706 17.1428571,9.41176471 L17.1428571,9.41176471 Z" id="Stroke-8" stroke-width="2"></path>
+                    <path d="M14.3374286,16.3755294 L21,23.984" id="Stroke-9" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
