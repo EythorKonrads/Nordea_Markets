@@ -82,8 +82,10 @@ body {
   color: #5F5F5F; }
 
 .btn-close {
+  position: relative;
   display: flex;
-  flex-direction: row-reverse; }
+  flex-direction: row-reverse;
+  cursor: pointer; }
 
 .btn-close:after {
   content: 'x';
@@ -241,7 +243,6 @@ body {
   display: flex;
   flex-direction: row;
   min-height: 100%;
-  position: relative;
   top: 0;
   transition: all 0.1s ease-in; }
   .card:hover {
@@ -295,6 +296,9 @@ body {
       width: 200px;
       float: left;
       margin: 5px 40px 10px 0; }
+
+.compare-articles-container {
+  margin-top: 10%; }
 
 .compare-articles-inner {
   width: 90%;
@@ -539,6 +543,15 @@ body {
   outline: none;
   white-space: normal;
   float: none; }
+
+/* Show articles onClick */
+.show-articles-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  top: 0;
+  right: 0px;
+  left: 0; }
 
 /* Card */
 .card .article-thumb-left {

@@ -111,7 +111,7 @@
           <div class="btn-filter" id="btnCompareArticle"  >
             <a>Compare</a>
             <span class="bottom"></span>
-            <div class="dropdown-content dropdown-content-show" id="dropdownDiv">
+            <div class="dropdown-content" id="dropdownDiv">
               <a id="btnCompareByAuthor" class="dropdown-item" href="#author">Author</a>
               <a class="dropdown-item" href="#date">Date</a>
             </div>
@@ -126,11 +126,154 @@
 
       </div>
 
-      <div id="showArticles" class="showTest hideTest" style="width: 400px; height: 50px; background: red; display: none;" >
+      <!-- Article expand onClick -->
+      <div id="showArticles" class="show-articles-container">
+          <section class="compare-articles-container">
+              <div class="compare-articles-inner">
+
+                  <span id="btnClose" class="btn-close"></span>
+
+                  <h1 class="h1-page-title">Compare to another article</h1>
+
+                  <!-- Search box -->
+                  <div class="search-box">
+                      <span class="icon">
+                          <i class="fa fa-search fa-2x"></i>
+                      </span>
+                      <input type="search" id="article-search" placeholder="Search for name, date  or text" />
+                  </div>
+
+                  <!-- CARDS -->
+                  <div id="clickToCompare" class="article-card-wrapper">
+
+                      <!-- COMPARE OVERLAY -->
+                      <div id="compareOverlay" class="compare-overlay" data-showCompare="compareOverlay">
+                          <div class="compare-question-box">
+
+                              <p>Are you shure you want to compare this article?</p>
+                              <div class="compare-button-box">
+                                  <button class="btn-sure btn-green">Yes</button>
+                                  <button class="btn-sure btn-red">No</button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div id="iCard" class="card">
+                          <!-- INNER LEFT -->
+                          <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                              <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                          </div>
+                          <!-- INNER RIGHT -->
+                          <article class="card-inner-right">
+                              <div class="article-header">
+                                  <span class="article-date">08.02.2017</span>
+                                  <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                              </div>
+                              <p class="article-paragraph">
+                                  Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                  sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                  civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                  eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                              </p>
+                          </article>
+                      </div>
+                  </div>
+
+                  <!-- CARDS -->
+                  <div class="article-card-wrapper">
+                      <a href="#" class="card">
+                          <!-- INNER LEFT -->
+                          <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                              <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                          </div>
+                          <!-- INNER RIGHT -->
+                          <article class="card-inner-right">
+                              <div class="article-header">
+                                  <span class="article-date">08.02.2017</span>
+                                  <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                              </div>
+                              <p class="article-paragraph">
+                                  Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                  sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                  civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                  eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                              </p>
+                          </article>
+                      </a>
+                  </div>
+                  <!-- CARDS -->
+                  <div class="article-card-wrapper">
+                      <a href="" class="card">
+                          <!-- INNER LEFT -->
+                          <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                              <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                          </div>
+                          <!-- INNER RIGHT -->
+                          <article class="card-inner-right">
+                              <div class="article-header">
+                                  <span class="article-date">08.02.2017</span>
+                                  <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                              </div>
+                              <p class="article-paragraph">
+                                  Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                  sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                  civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                  eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                              </p>
+                          </article>
+                      </a>
+                  </div>
+                  <!-- CARDS -->
+                  <div class="article-card-wrapper">
+                      <a href="" class="card">
+                          <!-- INNER LEFT -->
+                          <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                              <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                          </div>
+                          <!-- INNER RIGHT -->
+                          <article class="card-inner-right">
+                              <div class="article-header">
+                                  <span class="article-date">08.02.2017</span>
+                                  <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                              </div>
+                              <p class="article-paragraph">
+                                  Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                  sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                  civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                  eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                              </p>
+                          </article>
+                      </a>
+                  </div>
+                  <!-- CARDS -->
+                  <div class="article-card-wrapper">
+                      <a href="" class="card">
+                          <!-- INNER LEFT -->
+                          <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                              <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                          </div>
+                          <!-- INNER RIGHT -->
+                          <article class="card-inner-right">
+                              <div class="article-header">
+                                  <span class="article-date">08.02.2017</span>
+                                  <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                              </div>
+                              <p class="article-paragraph">
+                                  Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                  sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                  civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                  eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                              </p>
+                          </article>
+                      </a>
+                  </div>
+
+              </div>
+
+
+          </section>
 
       </div>
-
-
 
       <!-- Chart -->
       <div class="chart">
@@ -309,27 +452,43 @@
       function dropdownFilter() {
         var x = document.querySelector("#dropdownDiv");
 
-        if (x.className.indexOf("dropdown-content-show") == -1) {
-          x.className += "dropdown-content-show";
+        if (x.className.indexOf(" dropdown-content-show ") == -1) {
+
+          x.className += " dropdown-content-show ";
+
         } else {
-          x.className = x.className.replace("dropdown-content-show", " ")
+          x.className = x.className.replace("dropdown-content-show" , " ")
         }
       }
-
-      document.addEventListener('click', dropdownFilter);
+      var btnCompareArticle = document.querySelector('#btnCompareArticle');
+      btnCompareArticle.addEventListener('click', dropdownFilter);
 
 
       /******  Expand Articles  ******/
-      function getAuthorArticles() {
-          var authorArticles = document.getElementById('showArticles');
+        var authorArticles = document.getElementById('showArticles');
+        function getAuthorArticles() {
           if (authorArticles.style.display == "none") {
             authorArticles.style.display = "block";
-          } else {
-            authorArticles.style.display = "none"
-         }
+
+          } else if (authorArticles.style.display = "block") {
+
+            var btnClose = document.getElementById('btnClose');
+            btnClose.addEventListener('click', function () {
+              console.log('close');
+              authorArticles.style.display = "none"
+
+            })
+          }
         }
 
-        btnCompareByAuthor.addEventListener('click', getAuthorArticles );
+        btnCompareByAuthor.addEventListener('click', getAuthorArticles);
+
+      /******  Compare YES/NO overlay  ******/
+        var iCard = document.getElementById('iCard');
+          iCard.addEventListener('click', function () {
+
+              iCard.style.zIndex = "99";
+          });
     </script>
 
   </body>
