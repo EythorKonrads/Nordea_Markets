@@ -111,7 +111,7 @@
           <div class="btn-filter" id="btnCompareArticle"  >
             <a>Compare</a>
             <span class="bottom"></span>
-            <div class="dropdown-content dropdown-content-show" id="dropdownDiv">
+            <div class="dropdown-content" id="dropdownDiv">
               <a id="btnCompareByAuthor" class="dropdown-item" href="#author">Author</a>
               <a class="dropdown-item" href="#date">Date</a>
             </div>
@@ -452,14 +452,16 @@
       function dropdownFilter() {
         var x = document.querySelector("#dropdownDiv");
 
-        if (x.className.indexOf("dropdown-content-show") == -1) {
-          x.className += "dropdown-content-show";
+        if (x.className.indexOf(" dropdown-content-show ") == -1) {
+
+          x.className += " dropdown-content-show ";
+
         } else {
-          x.className = x.className.replace("dropdown-content-show", " ")
+          x.className = x.className.replace("dropdown-content-show" , " ")
         }
       }
-
-      document.addEventListener('click', dropdownFilter);
+      var btnCompareArticle = document.querySelector('#btnCompareArticle');
+      btnCompareArticle.addEventListener('click', dropdownFilter);
 
 
       /******  Expand Articles  ******/
