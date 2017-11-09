@@ -112,7 +112,7 @@
             <a>Compare</a>
             <span class="bottom"></span>
             <div class="dropdown-content dropdown-content-show" id="dropdownDiv">
-              <a class="dropdown-item" href="#author">Author</a>
+              <a id="btnCompareByAuthor" class="dropdown-item" href="#author">Author</a>
               <a class="dropdown-item" href="#date">Date</a>
             </div>
           </div>
@@ -125,6 +125,12 @@
         </div>
 
       </div>
+
+      <div id="showArticles" class="showTest hideTest" style="width: 400px; height: 50px; background: red; display: none;" >
+
+      </div>
+
+
 
       <!-- Chart -->
       <div class="chart">
@@ -311,6 +317,19 @@
       }
 
       document.addEventListener('click', dropdownFilter);
+
+
+      /******  Expand Articles  ******/
+      function getAuthorArticles() {
+          var authorArticles = document.getElementById('showArticles');
+          if (authorArticles.style.display == "none") {
+            authorArticles.style.display = "block";
+          } else {
+            authorArticles.style.display = "none"
+         }
+        }
+
+        btnCompareByAuthor.addEventListener('click', getAuthorArticles );
     </script>
 
   </body>

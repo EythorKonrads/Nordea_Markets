@@ -19,17 +19,24 @@
         <!-- Search box -->
         <div class="search-box">
             <span class="icon"><i class="fa fa-search fa-2x"></i></span>
-            <input type="search" id="article-search" placeholder="Search for name, date  or text" />
+            <input type="search" id="article-search" placeholder="Search for name, date  or text"/>
         </div>
 
         <!-- CARDS -->
-        <div class="article-card-wrapper">
+        <div id="clickToCompare" class="article-card-wrapper">
 
             <!-- COMPARE OVERLAY -->
-            <div class="compare-overlay"></div>
+            <div id="compareOverlay" class="compare-overlay" data-showCompare="compareOverlay">
+                <div class="compare-question-box">
 
+                    <p>Are you shure you want to compare this article?</p>
+                    <div class="compare-button-box">
+                        <button class="btn-sure btn-green">Yes</button><button class="btn-sure btn-red">No</button>
+                    </div>
+                </div>
+            </div>
 
-            <a href="" class="card">
+            <div id="iCard" class="card">
                 <!-- INNER LEFT -->
                 <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
                     <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
@@ -45,12 +52,12 @@
                         Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
                     </p>
                 </article>
-            </a>
+            </div>
         </div>
 
         <!-- CARDS -->
         <div class="article-card-wrapper">
-            <a href="" class="card">
+            <a href="#" class="card">
                 <!-- INNER LEFT -->
                 <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
                     <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
@@ -133,5 +140,20 @@
 
 
         </section>
+
+
+<script src="js/main.js"></script>
+
+<script>
+
+
+var iCard = document.getElementById('iCard');
+iCard.addEventListener('click', function () {
+
+    iCard.style.zIndex = "99";
+});
+
+</script>
+
 </body>
 </html>
