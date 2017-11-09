@@ -181,7 +181,12 @@ for (var i = 0; i < abtnShowChart.length; i++) {
 
 }
 
+/*********************************** DISPLAY COMPARE OVERLAY  ***********************************/
+/*
+var clickToCompare = document.querySelector('#clickToCompare');
 
+clickToCompare.addEventListener('click', function () {
+   console.log('XXSX');
 
-
-
+});
+ */
