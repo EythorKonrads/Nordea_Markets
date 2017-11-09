@@ -4,7 +4,6 @@
 	display: flex;
 	margin: 0 auto;
     flex-direction: column;
-    max-width: 1000px;
 }
 
 /**************************  GRAF X 4  ****************************/
@@ -25,6 +24,7 @@
 	flex-direction: row;
     display: flex;
     padding: 50px 0;
+    justify-content: center;
 }
 
 .chartButtons {
@@ -51,7 +51,7 @@
 }
 
 #iChartClickRate, #iChartSession, #iChartBounceRate {	
-	width: 804px;
+	width: 1000px;
 }
 
 /**************************  DOUGHNUT AND STATS  ****************************/
@@ -94,8 +94,9 @@
     	
 	.box {		
 		box-sizing: border-box;	
-    	height: 250px;
-    	width: 250px;	
+    	height: 300px;
+    	// width: 250px;	
+		width: 50%;
 		border: 1px solid #D1D1D1;	
 		background-color: #FAFAFA;
 		display: flex;
@@ -105,7 +106,7 @@
 
 			h2 {
     			width: 100px;
-    			margin-top: 33px;
+    			margin-top: 50px;
     			color: black;
 				font-family: "Source Sans Pro";	
 				font-size: 30px;	
@@ -187,6 +188,9 @@
 .iCarouselArticles{
 	padding: 70px 0px;
 	position:relative;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 
 	h2 {
 		color: black;
@@ -230,6 +234,7 @@
 .carousel__container {
 	overflow: hidden;
 	height: 440px;
+	max-width: 1000px;
 }
 	
 .carousel__list{
@@ -250,7 +255,7 @@
 
 .carousel-image {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	background-color: orange;
 	height: 440px;	
 	width: 333px;
@@ -271,12 +276,15 @@
     		line-height: 1.4;
 			padding: 20px;	
     		color: #FFFFFF;	
+    		background-color: #1ABC9C;
     		font-family: "Source Sans Pro";	
     		font-size: 24px;	
     		font-weight: 600;	
     		line-height: 31px;	
     		text-align: center;	
     		text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    		margin-bottom: 105px;
+
     	}
 
     	:hover {
@@ -292,7 +300,6 @@
 
 #iDashBoardFooter {
 	height: 300px;	
-	width: 1000px;	
 	background-color: #2B2B2B;
 	display: flex;
 	flex-direction: row;
@@ -303,12 +310,21 @@
 		max-width: 123px;
 		font-size: 14px;
     	text-align: center;
+
 	}
 
 	h3 {
 		color: white;
 		max-width: 123px;
 		text-align: center;
+		height: 31px;	
+		width: 131px;	
+		color: #FFFFFF;	
+		font-family: "Source Sans Pro";	
+		font-size: 24px;	
+		font-weight: bold;	
+		line-height: 31px;
+		margin: 10px 0;
 	}
 }
 

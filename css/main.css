@@ -369,8 +369,7 @@ button:focus {
 #dashBoardContainer {
   display: flex;
   margin: 0 auto;
-  flex-direction: column;
-  max-width: 1000px; }
+  flex-direction: column; }
 
 /**************************  GRAF X 4  ****************************/
 .cChart {
@@ -386,7 +385,8 @@ button:focus {
 #iTopDashBoard {
   flex-direction: row;
   display: flex;
-  padding: 50px 0; }
+  padding: 50px 0;
+  justify-content: center; }
 
 .chartButtons {
   flex-direction: column;
@@ -407,7 +407,7 @@ button:focus {
   color: white; }
 
 #iChartClickRate, #iChartSession, #iChartBounceRate {
-  width: 804px; }
+  width: 1000px; }
 
 /**************************  DOUGHNUT AND STATS  ****************************/
 #iBottomDashBoard {
@@ -443,8 +443,8 @@ button:focus {
   width: 50%; }
   .dashBoardBoxContainer .box {
     box-sizing: border-box;
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 50%;
     border: 1px solid #D1D1D1;
     background-color: #FAFAFA;
     display: flex;
@@ -453,7 +453,7 @@ button:focus {
     justify-content: center; }
     .dashBoardBoxContainer .box h2 {
       width: 100px;
-      margin-top: 33px;
+      margin-top: 50px;
       color: black;
       font-family: "Source Sans Pro";
       font-size: 30px;
@@ -515,7 +515,10 @@ button:focus {
 /**************************  CAROUSEL FOR ARTICLES  ****************************/
 .iCarouselArticles {
   padding: 70px 0px;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   .iCarouselArticles h2 {
     color: black;
     font-family: "Source Sans Pro";
@@ -548,7 +551,8 @@ button:focus {
 
 .carousel__container {
   overflow: hidden;
-  height: 440px; }
+  height: 440px;
+  max-width: 1000px; }
 
 .carousel__list {
   position: relative;
@@ -565,7 +569,7 @@ button:focus {
 
 .carousel-image {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   background-color: orange;
   height: 440px;
   width: 333px;
@@ -582,18 +586,19 @@ button:focus {
     line-height: 1.4;
     padding: 20px;
     color: #FFFFFF;
+    background-color: #1ABC9C;
     font-family: "Source Sans Pro";
     font-size: 24px;
     font-weight: 600;
     line-height: 31px;
     text-align: center;
-    text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+    text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 105px; }
   .carosel-textbox :hover {
     background-color: rgba(0, 0, 0, 0.5); }
 
 #iDashBoardFooter {
   height: 300px;
-  width: 1000px;
   background-color: #2B2B2B;
   display: flex;
   flex-direction: row;
@@ -606,7 +611,15 @@ button:focus {
   #iDashBoardFooter h3 {
     color: white;
     max-width: 123px;
-    text-align: center; }
+    text-align: center;
+    height: 31px;
+    width: 131px;
+    color: #FFFFFF;
+    font-family: "Source Sans Pro";
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 31px;
+    margin: 10px 0; }
 
 .footer-icon {
   height: 123px;
