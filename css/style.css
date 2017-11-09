@@ -449,6 +449,47 @@ body {
       color: #5F5F5F;
       white-space: nowrap; }
 
+/* filter arrow */
+.bottom {
+  content: '';
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  margin-top: 0.8em;
+  width: 0.9em;
+  height: 0.9em;
+  border-top: 0.1em solid #B4B4B4;
+  border-right: 0.1em solid #B4B4B4;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-right: 25px; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.dropdown-content {
+  cursor: auto;
+  color: #000;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  min-width: 146px;
+  margin: 60px 0;
+  padding: 0; }
+
+.dropdown-content-show {
+  display: block !important; }
+
+.dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  text-align: left;
+  border: 1px solid rgba(195, 206, 215, 0.44);
+  outline: none;
+  white-space: normal;
+  float: none; }
+
 /* Card */
 .card .article-thumb-left {
   padding: 50px 90px !important;
@@ -470,22 +511,6 @@ body {
 /* chart */
 #chartContainer {
   width: 100% !important; }
-
-/* filter arrow */
-.bottom {
-  content: '';
-  border-radius: 2px;
-  position: relative;
-  display: inline-block;
-  margin-top: 0.8em;
-  width: 0.9em;
-  height: 0.9em;
-  border-top: 0.1em solid #B4B4B4;
-  border-right: 0.1em solid #B4B4B4;
-  -moz-transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  margin-right: 25px; }
 
 .line {
   width: calc(100% - 15px);
@@ -530,7 +555,6 @@ body {
   .line {
     width: 100%;
     margin: 40px 0px; } }
-
 .staff-search {
   height: 100%;
   margin: 0 5%; }

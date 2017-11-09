@@ -108,11 +108,15 @@
 
         <div class="filterBox">
 
-          <div id="btnCompareArticle">
+          <div class="btn-filter" id="btnCompareArticle"  >
             <a>Compare</a>
             <span class="bottom"></span>
+            <div class="dropdown-content dropdown-content-show" id="dropdownDiv">
+              <a class="dropdown-item" href="#author">Author</a>
+              <a class="dropdown-item" href="#date">Date</a>
+            </div>
           </div>
-          <div id="btnCompareDate">
+          <div class="btn-filter" id="btnCompareDate"  >
             <a> 14.Jan.2017 - 14.Aug.2017</a>
             <span class="bottom"></span>
 
@@ -295,6 +299,18 @@
       })
 
 
+      /******   Dropdown  ******/
+      function dropdownFilter() {
+        var x = document.querySelector("#dropdownDiv");
+
+        if (x.className.indexOf("dropdown-content-show") == -1) {
+          x.className += "dropdown-content-show";
+        } else {
+          x.className = x.className.replace("dropdown-content-show", " ")
+        }
+      }
+
+      document.addEventListener('click', dropdownFilter);
     </script>
 
   </body>
