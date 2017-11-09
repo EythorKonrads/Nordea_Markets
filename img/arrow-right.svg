@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>play-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="36" cy="36" r="36"></circle>
+        <filter x="-16.0%" y="-13.2%" width="131.9%" height="131.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-925.000000, -1486.000000)" fill-rule="nonzero">
+            <g id="play-button" transform="translate(932.000000, 1491.000000)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#2D9EE7" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group" transform="translate(26.000000, 16.000000)" fill="#FFFFFF">
+                    <polygon id="Shape" points="28.75 20 1.25 38.75 1.25 20.34125 1.25 1.25"></polygon>
+                    <path d="M1.25,40 C1.05,40 0.84875,39.9525 0.66625,39.855 C0.25625,39.63875 0,39.21375 0,38.75 L0,1.25 C0,0.78625 0.25625,0.36125 0.66625,0.145 C1.07625,-0.0725 1.57125,-0.0425 1.955,0.2175 L29.455,18.9675 C29.795,19.2 30,19.58625 30,20 C30,20.41375 29.795,20.8 29.45375,21.0325 L1.95375,39.7825 C1.7425,39.92625 1.49625,40 1.25,40 Z M2.5,3.61625 L2.5,36.385 L26.53125,20 L2.5,3.61625 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>chevron</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-866.000000, -769.000000)" fill-rule="nonzero">
+            <g id="chevron" transform="translate(866.000000, 769.000000)">
+                <circle id="Oval" fill="#2B9153" cx="16" cy="16" r="16"></circle>
+                <path d="M32,15.9101276 C32,14.2277932 31.7450434,12.6059844 31.2729244,11.0817204 L25.2775713,5 L18.5964684,11.8876595 L7,9.2178092 L17.489777,19.8588086 L17.4409542,19.9519539 L7,16.4278947 L15.0225527,24.5661019 L14.6369269,25.3018364 L7,23.6379802 L15.2157993,31.9722198 C15.5213135,31.9900067 15.8288724,32 16.1387856,32 C24.8986989,32 32,24.7963253 32,15.9101276 Z" id="Shape" fill="#005D5E"></path>
+                <polygon id="Shape" fill="#FFDC00" points="7 12 7 16.3650401 16 22 25 16.3650401 25 12 16 17.6349599"></polygon>
+                <polygon id="Shape" fill="#FFC000" points="16 22 25 16.3650401 25 12 16 17.6349599"></polygon>
+                <polygon id="Shape" fill="#FFDC00" points="7 5 7 9.36506852 16 15 25 9.36506852 25 5 16 10.6349315"></polygon>
+                <polygon id="Shape" fill="#FFC000" points="16 15 25 9.36497509 25 5 16 10.6348948"></polygon>
+                <polygon id="Shape" fill="#FFDC00" points="7 19 7 23.3650035 16 29 25 23.3650035 25 19 16 24.6349315"></polygon>
+                <polygon id="Shape" fill="#FFC000" points="16 29 25 23.3651052 25 19 16 24.6350249"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
