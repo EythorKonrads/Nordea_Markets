@@ -1,3 +1,4 @@
+
 /*********************************** CALENDAR ***********************************/
 // Work in process
 // var picker = new Pikaday({ field: document.getElementById('datepicker') });
@@ -27,6 +28,11 @@
         var userMenuNav = document.querySelector(".userMenuNav");
         userMenuNav.classList.remove("activeUserNav");
     });
+
+
+window.onload = function(){
+    document.getElementById('default').click();
+  }
 
 
 /*********************************** VISITORS CHART   ***********************************/
