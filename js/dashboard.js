@@ -1,35 +1,8 @@
+/*********************************** DISPLAY CHART ON LOAD   ***********************************/
+
 window.onload = function(){
-    document.getElementById('default').click();
+    document.getElementById('ChartClickRate').click();
   }
-
-/*********************************** VISITORS CHART   ***********************************/
-
-var chartVisitor = document.querySelector("#ChartVisitors");
-// console.log(chart);
-var chartContentVisitor = new Chart(chartVisitor, {
-	type: "line",
-	data:{
-		labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
-        datasets: [{
-            label: '# Visitors',
-            data: [121, 192, 310, 265, 432, 223, 373, 253, 133, 527, 345, 125],
-            fill: false,
-            lineTension: 0.5,
-            borderColor: '#ee6c5e',
-            borderWidth: 2
-        }]
-	},
-	    options: {
-        // showLines: false,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
 
 /*********************************** CLICK RATE CHART   ***********************************/
 
@@ -93,7 +66,7 @@ var chartContentSession = new Chart(chartSession, {
 
 var chartBounceRate = document.querySelector("#ChartBounceRate");
 // console.log(chart);
-var chartContentClickRate = new Chart(chartBounceRate, {
+var chartContentBounceRate = new Chart(chartBounceRate, {
     type: "line",
     data:{
         labels: ["Age", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
@@ -112,48 +85,6 @@ var chartContentClickRate = new Chart(chartBounceRate, {
             yAxes: [{
                 ticks: {
                     beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-
-/*********************************** USER INFO CHART   ***********************************/
-
-var chartUserInfo = document.querySelector("#ChartUserInfo");
-// console.log(chart);
-
-var chartContentUserInfo = new Chart(ChartUserInfo, {
-    type: 'bar',
-    data: {
-        labels: ["Female", "Male", "Other"],
-        datasets: [{
-            label: '# User Info',
-            data: [40, 55, 5],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
                 }
             }]
         }
@@ -185,12 +116,82 @@ for (var i = 0; i < abtnShowChart.length; i++) {
 
 }
 
-/*********************************** DISPLAY COMPARE OVERLAY  ***********************************/
-/*
-var clickToCompare = document.querySelector('#clickToCompare');
+/*********************************** DOUGHNUT CHART  ***********************************/
 
-clickToCompare.addEventListener('click', function () {
-   console.log('XXSX');
+new Chart(document.getElementById("pie-chart"), {
+    type: 'doughnut',
+    data: {
+      labels: ["< 18", "19 - 24", "25 - 35", "36 - 45", "46 <"],
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+        data: [433,784,2478,5267,734]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Age'
+      },
+      legend: {
+        position: 'left',
+        labels: {
+          boxWidth: 15,
+          padding: 20
+        },
 
+      }
+
+    }
 });
- */
+
+/***************************************** CAROUSEL *************************************/
+
+$(".js-carousel").each(function(){
+    var $carousel = $(this),
+        $carouselContainer = $carousel.find(".js-carousel-container"),
+        $carouselList = $carousel.find(".js-carousel-list"),
+        $carouselItem = $carousel.find(".js-carousel-item"),
+        $carouselButton = $carousel.find(".js-carousel-button"),
+        setItemWidth = function(){
+            $carouselList.removeAttr("style");
+            var curWidth = $($carouselItem[0]).outerWidth() * $carouselItem.length;
+            $carouselList.css("width", curWidth);
+        },
+        slide = function(){
+            var $button = $(this),
+                dir = $button.data("dir"),
+                curPos = parseInt($carouselList.css("left")) || 0,
+                moveto = 0,
+                containerWidth = $carouselContainer.outerWidth(),
+                listWidth = $carouselList.outerWidth(),
+                before = (curPos + containerWidth),
+                after = listWidth + (curPos - containerWidth);
+            if(dir=="next"){
+                moveto = (after < containerWidth) ? curPos - after : curPos - containerWidth;
+            } else {
+                moveto = (before >= 0) ? 0 : curPos + containerWidth;
+            }
+            
+            
+            $carouselList.animate({
+                left: moveto
+            });
+        };
+    $(window).resize(function(){
+        setItemWidth();
+    });
+    setItemWidth();
+    
+    $carouselButton.on("click", slide);
+});
+
+
+
+
+
+
+
+
+
+
