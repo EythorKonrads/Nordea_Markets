@@ -1,4 +1,8 @@
+/*********************************** DISPLAY CHART ON LOAD   ***********************************/
 
+window.onload = function(){
+    document.getElementById('ChartClickRate').click();
+  }
 
 /*********************************** CLICK RATE CHART   ***********************************/
 
@@ -87,7 +91,6 @@ var chartContentBounceRate = new Chart(chartBounceRate, {
     }
 });
 
-
 /*********************************** DISPLAY CHARTS  ***********************************/
 
 var abtnShowChart = document.getElementsByClassName("btnShowChart");
@@ -113,7 +116,7 @@ for (var i = 0; i < abtnShowChart.length; i++) {
 
 }
 
-/*********************************** DISPLAY CHARTS  ***********************************/
+/*********************************** DOUGHNUT CHART  ***********************************/
 
 new Chart(document.getElementById("pie-chart"), {
     type: 'doughnut',

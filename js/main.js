@@ -1,3 +1,7 @@
+window.onload = function(){
+    document.getElementById('default').click();
+  }
+
 /*********************************** VISITORS CHART   ***********************************/
 
 var chartVisitor = document.querySelector("#ChartVisitors");
