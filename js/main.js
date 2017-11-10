@@ -1,3 +1,40 @@
+
+/*********************************** CALENDAR ***********************************/
+// Work in process
+// var picker = new Pikaday({ field: document.getElementById('datepicker') });
+// console.log(picker);
+
+
+
+/*********************************** MENU SECTION ***********************************/
+    /******  Sidebar ******/
+    burgerMenu.addEventListener("click", function(){
+    var sidebar = document.querySelector(".sidebar");
+        sidebar.classList.add("active");
+    });
+    btnCloseSidebar.addEventListener("click", function(){
+    var sidebar = document.querySelector(".sidebar");
+        sidebar.classList.remove("active");
+    });
+
+    /******   User  ******/
+    userIcon.addEventListener("click", function(){
+    console.log("X")
+        var userMenuNav = document.querySelector(".userMenuNav");
+        userMenuNav.classList.add("activeUserNav");
+    });
+    btnCloseUserNav.addEventListener("click", function(){
+    console.log("C")
+        var userMenuNav = document.querySelector(".userMenuNav");
+        userMenuNav.classList.remove("activeUserNav");
+    });
+
+
+window.onload = function(){
+    document.getElementById('default').click();
+  }
+
+
 /*********************************** VISITORS CHART   ***********************************/
 
 var chartVisitor = document.querySelector("#ChartVisitors");
@@ -181,7 +218,46 @@ for (var i = 0; i < abtnShowChart.length; i++) {
 
 }
 
+/*********************************** AUTHOR SECTION  ***********************************/
+
+ /******   Dropdown  ******/
+ function dropdownFilter() {
+    var x = document.querySelector("#dropdownDiv");
+
+    if (x.className.indexOf(" dropdown-content-show ") == -1) {
+
+      x.className += " dropdown-content-show ";
+
+    } else {
+      x.className = x.className.replace("dropdown-content-show" , " ")
+    }
+  }
+  var btnCompareArticle = document.querySelector('#btnCompareArticle');
+  btnCompareArticle.addEventListener('click', dropdownFilter);
 
 
+  /******  Expand Articles  ******/
+    var authorArticles = document.getElementById('showArticles');
+    function getAuthorArticles() {
+      if (authorArticles.style.display == "none") {
+        authorArticles.style.display = "block";
 
+      } else if (authorArticles.style.display = "block") {
 
+        var btnClose = document.getElementById('btnClose');
+        btnClose.addEventListener('click', function () {
+          console.log('close');
+          authorArticles.style.display = "none"
+
+        })
+      }
+    }
+
+    btnCompareByAuthor.addEventListener('click', getAuthorArticles);
+
+  /******  Compare YES/NO overlay  ******/
+    var iCard = document.getElementById('iCard');
+      iCard.addEventListener('click', function () {
+
+        compareOverlay.style.display = "flex";
+      });
