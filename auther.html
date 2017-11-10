@@ -117,9 +117,9 @@
             </div>
           </div>
           <div class="btn-filter" id="btnCompareDate"  >
+              <!-- <input type="text" id="datepicker-2months"> -->
+              <a>Date will come here</a>
             <span class="bottom"></span>
-
-
           </div>
         </div>
 
@@ -202,7 +202,7 @@
                   </div>
                   <!-- CARDS -->
                   <div class="article-card-wrapper">
-                      <a href="" class="card">
+                      <a href="single-article.html" class="card">
                           <!-- INNER LEFT -->
                           <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
                               <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
@@ -294,7 +294,7 @@
           </div>
 
           <div class="chartButtons">
-            <button id="test" class="btnShowChart" data-showThisChart="iChartVisitors" checked>Visitors</button>
+            <button id="default" class="btnShowChart" data-showThisChart="iChartVisitors" checked>Visitors</button>
             <button class="btnShowChart" data-showThisChart="iChartClickRate">Click Rate<br>(int) %</button>
             <button class="btnShowChart" data-showThisChart="iChartSession">Avg Session<br>(int) min</button>
             <button class="btnShowChart" data-showThisChart="iChartBounceRate">Bounce Rate<br>(int) %</button>
@@ -310,7 +310,7 @@
     <section class="articles-container">
         <!-- CARDS -->
         <div class="article-card-wrapper">
-            <a href="" class="card">
+            <a href="single-article.html" class="card">
                 <!-- INNER LEFT -->
                 <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
                     <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
@@ -330,7 +330,7 @@
         </div>
         <!-- CARDS -->
         <div class="article-card-wrapper">
-            <a href="" class="card">
+            <a href="single-article.html" class="card">
                 <!-- INNER LEFT -->
                 <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
                     <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
@@ -350,7 +350,7 @@
         </div>
         <!-- CARDS -->
         <div class="article-card-wrapper">
-            <a href="" class="card">
+            <a href="single-article.html" class="card">
                 <!-- INNER LEFT -->
                 <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
                     <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
@@ -370,7 +370,7 @@
         </div>
         <!-- CARDS -->
         <div class="article-card-wrapper">
-            <a href="" class="card">
+            <a href="single-article.html" class="card">
                 <!-- INNER LEFT -->
                 <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
                     <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
@@ -390,7 +390,7 @@
         </div>
         <!-- CARDS -->
         <div class="article-card-wrapper">
-            <a href="" class="card">
+            <a href="single-article.html" class="card">
                 <!-- INNER LEFT -->
                 <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
                     <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
@@ -417,11 +417,13 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
-  	<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
     <script>
 
     window.onload = function(){
-      document.getElementById('test').click();
+
+      document.getElementById('default').click();
+
     }
 
       /******  Sidebar ******/
@@ -447,48 +449,6 @@
       })
 
 
-      /******   Dropdown  ******/
-      function dropdownFilter() {
-        var x = document.querySelector("#dropdownDiv");
-
-        if (x.className.indexOf(" dropdown-content-show ") == -1) {
-
-          x.className += " dropdown-content-show ";
-
-        } else {
-          x.className = x.className.replace("dropdown-content-show" , " ")
-        }
-      }
-      var btnCompareArticle = document.querySelector('#btnCompareArticle');
-      btnCompareArticle.addEventListener('click', dropdownFilter);
-
-
-      /******  Expand Articles  ******/
-        var authorArticles = document.getElementById('showArticles');
-        function getAuthorArticles() {
-          if (authorArticles.style.display == "none") {
-            authorArticles.style.display = "block";
-
-          } else if (authorArticles.style.display = "block") {
-
-            var btnClose = document.getElementById('btnClose');
-            btnClose.addEventListener('click', function () {
-              console.log('close');
-              authorArticles.style.display = "none"
-
-            })
-          }
-        }
-
-        btnCompareByAuthor.addEventListener('click', getAuthorArticles);
-
-      /******  Compare YES/NO overlay  ******/
-        var iCard = document.getElementById('iCard');
-          iCard.addEventListener('click', function () {
-
-            compareOverlay.style.display = "flex";
-          });
     </script>
-
   </body>
 </html>
