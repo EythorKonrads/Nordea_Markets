@@ -26,3 +26,45 @@
     left: -50px;
     color: $txtFilterColor;
 }
+
+.btn-close {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+
+}
+
+.btn-close:after {
+    content: 'x';
+    color: $txtTitleColor;
+    font-weight: 300;
+    // font-family: Arial, sans-serif;
+    font-size: 3rem;
+    position: absolute;
+    top: 4%;
+}
+
+
+.btn-sure {
+    height: 40px;
+    width: 88px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    color: #fff;
+    font-family: $mainFont;
+    font-size: 18px;
+    line-height: 1.35;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-green {
+    background-color: $btnYesColor;
+}
+
+.btn-red {
+    background-color: $btnNoColor;
+}
+
+
