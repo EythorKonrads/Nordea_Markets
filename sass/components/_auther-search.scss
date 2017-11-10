@@ -1,6 +1,6 @@
 .staff-search {
     height: 100%;
-    margin: 0 5%;
+    margin: 0 5vw;
   }
   
 .staff-search__container {
@@ -11,7 +11,7 @@
 .staff-search__action-container {
   margin: 0 0 40px 0;
   max-width: 1015px;
-  width: 100%;
+  width: 90vw;
 }
 
 .staff-search__box {
@@ -22,7 +22,7 @@
 }
 
 input.staff-search__searchbar {
-  width: 100%;
+  width: 90vw;
   height: 60px;
   font-size: 0.8em;
   opacity: 1;
@@ -39,7 +39,7 @@ input .staff-search__searchbar {
 .staff-search__search-icon {
   position: absolute;
   top: 0;
-  right: 30px;
+  right: 0;
   margin-top: 17px;
   z-index: 1;
 
@@ -80,7 +80,6 @@ input .staff-search__searchbar {
 
 .search-results__item div {
   line-height: 80px;
-  display: inline-block;
 }
 
 .search-results__img {
@@ -107,6 +106,7 @@ input .staff-search__searchbar {
 
 .search-results__email {
   color: $mainBlue;
+  min-width: 200px;
 }
 
 .search-results__profession-icon,
@@ -137,14 +137,40 @@ input .staff-search__searchbar {
 
 // ******  Mediaqueries  ********
 
-@media screen and (max-width: 900px){ 
+@media screen and (max-width: 1120px) {
 
-  .staff-search {
-    margin: 0 5vw;
+  .search-results__name {
+    min-width: 150px;
   }
+
+}
+
+@media screen and (max-width: 900px){ 
 
   .staff-search__action-container {
     max-width: 90vw;
   }
+
+  .search-results__profession-name,
+  .search-results__phone-number {
+    
+  }
   
+}
+
+@media screen and (max-width: 600px) {
+
+  input.staff-search__searchbar {
+    font-size: 0.5em;
+  }
+
+  .search-results__profession-icon,
+  .search-results__phone-icon,
+  .search-results__email-icon,
+  .search-results__profession-name,
+  .search-results__phone-number,
+  .search-results__email {
+    display: none;
+  }
+
 }
