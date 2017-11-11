@@ -19,7 +19,7 @@
 	display: flex;
 	flex-direction: row;
 	min-height: 100%;
-	position: relative;
+	// position: relative;
 	top: 0;
 	transition: all 0.1s ease-in;
 
@@ -108,10 +108,9 @@
 
 // Compare articles
 
-// .compare-articles-container {
-
-
-// }
+.compare-articles-container {
+	margin-top: 10%;
+}
 
 .compare-articles-inner {
 	width: 90%;
@@ -124,13 +123,10 @@
 	grid-template-rows: 1fr;
 	grid-row-gap: 1rem;
 
+
 	.article-card-wrapper {
 		position: relative;
 	}
-}
-
-#iCard {
-	z-index: 101;
 }
 
 .compare-overlay {
@@ -140,7 +136,7 @@
     position: absolute;
     bottom: 0;
 	z-index: 100;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 
@@ -168,3 +164,6 @@
 }
 
 
+// #iCard {
+// 	z-index: 101;
+// }
