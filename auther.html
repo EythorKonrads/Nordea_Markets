@@ -293,7 +293,7 @@
             <canvas id="ChartUserInfo" ></canvas>
           </div>
 
-          <div class="chartButtons">
+          <div class="chartButtons chartButtonsAuthor">
             <button id="default" class="btnShowChart" data-showThisChart="iChartVisitors" checked>Visitors</button>
             <button class="btnShowChart" data-showThisChart="iChartClickRate">Click Rate<br>(int) %</button>
             <button class="btnShowChart" data-showThisChart="iChartSession">Avg Session<br>(int) min</button>
@@ -420,27 +420,13 @@
     <script src="js/main.js"></script>
     <script>
 
-      /******  Sidebar ******/
-      burgerMenu.addEventListener("click", function(){
-        var sidebar = document.querySelector(".sidebar");
-          sidebar.classList.add("active");
-      })
-      btnCloseSidebar.addEventListener("click", function(){
-        var sidebar = document.querySelector(".sidebar");
-          sidebar.classList.remove("active");
-      })
+    window.onload = function(){
 
-      /******   User  ******/
-      userIcon.addEventListener("click", function(){
-        console.log("X")
-          var userMenuNav = document.querySelector(".userMenuNav");
-          userMenuNav.classList.add("activeUserNav");
-      })
-      btnCloseUserNav.addEventListener("click", function(){
-        console.log("C")
-          var userMenuNav = document.querySelector(".userMenuNav");
-          userMenuNav.classList.remove("activeUserNav");
-      })
+      document.getElementById('default').click();
+
+    }
+
+
 
 
     </script>
