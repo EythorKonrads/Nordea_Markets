@@ -113,6 +113,27 @@ body {
 .btn-red {
   background-color: #EE6C5E; }
 
+.btn-back {
+  margin-top: 1rem; }
+  .btn-back a {
+    text-decoration: none;
+    color: #5F5F5F;
+    font-size: 20px; }
+  .btn-back .side-arrow {
+    content: '';
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-top: 0.8em;
+    width: 0.9em;
+    height: 0.9em;
+    border-right: 0.1em solid #5F5F5F;
+    border-bottom: 0.1em solid #5F5F5F;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    margin-right: 4px; }
+
 /******************  Desktop HEADER   *********************/
 .header {
   height: 80px;
@@ -233,7 +254,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  grid-row-gap: 2rem; }
+  grid-row-gap: 2rem;
+  padding-bottom: 3rem; }
 
 .card {
   background-color: #fff;
@@ -289,7 +311,8 @@ body {
   max-width: 975px;
   margin: 0 auto; }
   .article-container article {
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-bottom: 4rem; }
     .article-container article h2 {
       margin: 35px 0; }
     .article-container article .article-image {
@@ -470,7 +493,8 @@ button:focus {
   flex-direction: row; }
   .chartButtonsAuthor button {
     color: #5F5F5F;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 3; }
 
 #btnClickRate {
   background-color: #36A2EB; }
@@ -685,7 +709,8 @@ button:focus {
   background-color: #2B2B2B;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin-top: 3rem; }
   #iFooter p {
     color: white;
     max-width: 123px;
@@ -846,7 +871,8 @@ body {
 .container {
   width: calc(100% - 100px);
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  padding-bottom: 3rem; }
 
 @media screen and (max-width: 900px) {
   .container {
