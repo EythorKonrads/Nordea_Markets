@@ -93,7 +93,7 @@
 
 		<div id="iTopDashBoard">
 			<div class="chartButtons">
-				<button id="btnClickRate" class="btnShowChart" data-showThisChart="iChartClickRate">Click Rate</button>
+				<button id="default" class="btnShowChart" data-showThisChart="iChartClickRate">Click Rate</button>
 				<button id="btnSession" class="btnShowChart" data-showThisChart="iChartSession">Avg Session</button>
 				<button id="btnBounceRate" class="btnShowChart" data-showThisChart="iChartBounceRate">Bounce Rate</button>
 			</div>
@@ -344,6 +344,10 @@
 	</div>
 
 	<script>
+
+				window.onload = function(){
+            document.getElementById('iChartClickRate').click();
+        };
 		      /******  Sidebar ******/
       burgerMenu.addEventListener("click", function(){
         var sidebar = document.querySelector(".sidebar");

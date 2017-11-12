@@ -1,6 +1,6 @@
-window.onload = function(){
-    document.getElementById('default').click();
-  }
+// window.onload = function(){
+//     document.getElementsByClassName('default').click();
+//   }
 
 /*********************************** VISITORS CHART   ***********************************/
 
