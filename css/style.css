@@ -114,7 +114,8 @@ body {
   background-color: #EE6C5E; }
 
 .btn-back {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  margin-left: 1rem; }
   .btn-back a {
     text-decoration: none;
     color: #5F5F5F;
@@ -774,6 +775,8 @@ body {
     max-height: 180px;
     height: 100%;
     width: 100%; }
+  .autherBox .search-results__img {
+    display: none; }
 
 .autherBoxInfo {
   padding: 20px;
@@ -900,8 +903,15 @@ body {
     width: 100% !important;
     margin: 0 auto; }
 
-  .autherBoxImage {
-    display: none; }
+  .autherBox {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end; }
+    .autherBox .autherBoxImage {
+      display: none; }
 
   #iChartVisitors {
     display: none; }
