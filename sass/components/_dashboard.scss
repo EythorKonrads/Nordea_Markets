@@ -64,6 +64,7 @@
 }
 
 #iChartReaders {	
+	position: relative;
 	box-sizing: border-box;	
     height: auto;
     width: 50%;	
@@ -71,26 +72,71 @@
 	background-color: #FAFAFA;
 	align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 
     	h2 {
     		color: black;
-    		width: 100px;
-    		margin-top: 33px;
     		color: black;
 			font-family: "Source Sans Pro";	
-			font-size: 30px;	
+			font-size: 24px;	
 			font-style: italic;	
 			font-weight: 300;	
-			line-height: 45px;	
+			line-height: 35px;	
 			text-align: center;
     	}
 
     	p {
-    		font-weight: bolder;
-    		margin: 30px 0;
+			font-weight: bolder;
+			font-size: 16px;
+			text-align: center;
     	}
+}
+
+.doughnut-stats {
+	flex-direction: column;
+	display: flex;
+	margin-right: -100px;
+	padding-left: 100px;
+	
+	.box {
+		height: 40px;
+		width: 80px;
+		text-align: center;
+		margin: 20px 0 20px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	p {
+		color: white;
+	}
+
+	.box-1 {
+		background-color: #3e95cd;
+	}
+	.box-2 {
+		background-color: #8e5ea2;
+	}
+	.box-3 {
+		background-color: #3cba9f;
+	}
+	.box-4 {
+		background-color: #e8c3b9;
+	}
+	.box-5 {
+		background-color: #c45850;
+	}
+}
+
+canvas {
+	margin-bottom: 30px;
+}
+
+.doughnut-text {
+	position: absolute;
+	margin: 0 0 0 55px;
 }
 
 .dashBoardBoxContainer {	
@@ -453,6 +499,23 @@
 
 	#iChartReaders {
 		width: 100%;
+		flex-direction: column-reverse;
+	}
+
+	.doughnut-stats {
+		flex-direction: row;
+		margin-right: 0px; 
+		padding-left: 0px; 
+		
+		.box {
+			margin: 20px 20px 50px 20px;
+		}
+	}
+
+	.doughnut-text {
+		position: absolute;
+		padding: 0 0 100px 25px;
+		margin: 0;
 	}
 
 	.carousel__container {
