@@ -127,7 +127,7 @@
             <span class="bottom"></span>
             <div class="dropdown-content" id="dropdownDiv">
               <a id="btnCompareByAuthor" class="dropdown-item" href="#author">Author</a>
-              <a class="dropdown-item" href="#date">Date</a>
+              <a id="btnCompareByDate"  class="dropdown-item" href="#date">Date</a>
             </div>
           </div>
           <div class="btn-filter" id="btnCompareDate"  >
@@ -318,7 +318,7 @@
       <!-- Chart -->
       <div class="chart">
           <div id="chartContainer">
-            <div id="iChartVisitors" class="cChart">
+            <div id="iChartVisitors" class="cChart"  >
             <canvas id="ChartVisitors" ></canvas>
           </div>
            <div id="iChartClickRate" class="cChart">
@@ -519,7 +519,7 @@
     <script>
 
     /******  btnDate ******/
-    btnCompareDate.addEventListener("click", function(){
+    btnCompareByDate.addEventListener("click", function(){
       var calendarContainer = document.querySelector(".calendar-container");
         calendarContainer.classList.toggle("activeCalendar");
 
@@ -554,7 +554,7 @@
           var userMenuNav = document.querySelector(".userMenuNav");
           userMenuNav.classList.remove("activeUserNav");
       })
-      
+
     window.onload = function(){
 
       document.getElementById('default').click();

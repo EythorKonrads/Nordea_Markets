@@ -397,7 +397,11 @@ button:focus {
     margin: 30px 0;
     display: flex;
     justify-content: space-around;
-    flex-direction: row; }
+    flex-direction: row;
+    flex-wrap: wrap; }
+    #chartContainer .chartButtons button {
+      padding: 10px 15px;
+      margin: 10px; }
     #chartContainer .chartButtons .btnShowChart {
       color: black; }
       #chartContainer .chartButtons .btnShowChart:focus {
@@ -721,7 +725,6 @@ button:focus {
   flex-wrap: wrap;
   margin-top: 3rem;
   padding: 30px 0; }
-
   #iFooter p {
     color: white;
     max-width: 123px;
@@ -764,7 +767,6 @@ button:focus {
 
   #iChartReaders {
     width: 100%; } }
-
 .calendar-container {
   display: flex;
   margin: 0 auto;
@@ -896,7 +898,6 @@ body {
 @media screen and (max-width: 500px) {
   .calendar-container {
     display: none; } }
-
 body {
   background: white !important; }
 
@@ -943,7 +944,8 @@ body {
 .filterBox {
   display: flex;
   flex-direction: row;
-  margin: 20px; }
+  margin: 20px;
+  z-index: 2; }
   .filterBox #btnCompareArticle, .filterBox #btnCompareDate {
     display: flex;
     justify-content: center;
