@@ -337,20 +337,59 @@
 .footer-icon {
 	height: 123px;	
 	width: 123px;	
-	background-color: #2D9EE7;
 	margin-top: 30px;
 }
 
 /**************************  MEDIA QUERYS FOR HOME DASHBORAD  ****************************/
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
 
-	.carousel__container {
-		max-width: 900px;
+	#dashBoardContainer {
+			width: 100%!important;
+			margin: 0 auto;
 	}
 
-	.carousel-image {
-		width: 450px;
+	.chartjs-render-monitor {
+		width: 100%!important;
+		margin: 0 auto;
+		height: 250px;
+	}
+
+	#iTopDashBoard {
+		flex-direction: column-reverse;
+
+		.chartButtons{
+			flex-direction: row;
+		}
+	}
+
+	#quoteBanner {	
+		justify-content: space-evenly;
+
+		h2 {	
+			width: auto;
+			font-size: 24px;	
+		}
+
+		h3 {
+			font-size: 16px;			
+		}
+	}
+
+	.carousel__container {
+		max-width: 333px;
+
+		button {
+			width: 60px; 
+			height: 60px;
+		}
+
+		.carousel-button-image {
+			img {
+				width: 60px; 
+				height: 60px;
+			}
+		}
 	}
 
 	#iBottomDashBoard {
@@ -363,6 +402,30 @@
 
 	#iChartReaders {
 		width: 100%;
+	}
+
+	#iFooter {
+
+		height: 180px;
+
+		.footer-icon {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin-top: 0px;
+		}
+
+		h3 {
+			font-size: 18px;
+		}
+
+		p {
+			display: none;
+		}
+
+		img {
+			width: 80px;
+		}
 	}
 
 

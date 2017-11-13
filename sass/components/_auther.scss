@@ -195,12 +195,15 @@ body{
   .autherBoxImage{
     display: none;
   }
-  #iChartVisitors{
-    display: none;
-  }
-  .btnShowChart:nth-last-child(1){
-    display: none;
-  }
+
+  #chartContainer {
+    #iChartVisitors{
+      display: none;
+    }
+    .btnShowChart:nth-last-child(1){
+      display: none;
+    }
+}
 
   .articles-container{
     .card{

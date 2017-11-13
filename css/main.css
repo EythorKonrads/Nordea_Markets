@@ -701,16 +701,40 @@ button:focus {
 .footer-icon {
   height: 123px;
   width: 123px;
-  background-color: #2D9EE7;
   margin-top: 30px; }
 
 /**************************  MEDIA QUERYS FOR HOME DASHBORAD  ****************************/
-@media screen and (max-width: 900px) {
-  .carousel__container {
-    max-width: 900px; }
+@media screen and (max-width: 600px) {
+  #dashBoardContainer {
+    width: 100% !important;
+    margin: 0 auto; }
 
-  .carousel-image {
-    width: 450px; }
+  .chartjs-render-monitor {
+    width: 100% !important;
+    margin: 0 auto;
+    height: 250px; }
+
+  #iTopDashBoard {
+    flex-direction: column-reverse; }
+    #iTopDashBoard .chartButtons {
+      flex-direction: row; }
+
+  #quoteBanner {
+    justify-content: space-evenly; }
+    #quoteBanner h2 {
+      width: auto;
+      font-size: 24px; }
+    #quoteBanner h3 {
+      font-size: 16px; }
+
+  .carousel__container {
+    max-width: 333px; }
+    .carousel__container button {
+      width: 60px;
+      height: 60px; }
+    .carousel__container .carousel-button-image img {
+      width: 60px;
+      height: 60px; }
 
   #iBottomDashBoard {
     flex-direction: column; }
@@ -719,7 +743,21 @@ button:focus {
     width: 100%; }
 
   #iChartReaders {
-    width: 100%; } }
+    width: 100%; }
+
+  #iFooter {
+    height: 180px; }
+    #iFooter .footer-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 0px; }
+    #iFooter h3 {
+      font-size: 18px; }
+    #iFooter p {
+      display: none; }
+    #iFooter img {
+      width: 80px; } }
 body {
   background: white !important; }
 
@@ -867,10 +905,9 @@ body {
   .autherBoxImage {
     display: none; }
 
-  #iChartVisitors {
+  #chartContainer #iChartVisitors {
     display: none; }
-
-  .btnShowChart:nth-last-child(1) {
+  #chartContainer .btnShowChart:nth-last-child(1) {
     display: none; }
 
   .articles-container .card {
