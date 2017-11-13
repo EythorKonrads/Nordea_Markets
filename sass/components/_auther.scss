@@ -1,5 +1,5 @@
 body{
-  background: white!important;
+  background: white;
 }
 
 .auther{
@@ -63,6 +63,7 @@ body{
   display: flex;
   flex-direction: row;
   margin: 20px;
+  z-index: 2;
 
   #btnCompareArticle, #btnCompareDate{
     display: flex;
@@ -130,6 +131,7 @@ body{
 
 /* Show articles onClick */
 .show-articles-container {
+  z-index: 3;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
