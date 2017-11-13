@@ -778,6 +778,24 @@ canvas {
   #iChartReaders {
     width: 100%; }
 
+  .doughnut-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    margin-bottom: 40px; }
+    .doughnut-stats .box {
+      margin: 20px 10px 0px 10px !important; }
+
+  .doughnut-text {
+    padding: 0 7px 190px 0 !important; }
+    .doughnut-text h2 {
+      font-size: 20px !important; }
+    .doughnut-text p {
+      font-size: 14px !important; }
+
+  canvas {
+    margin: 0 35px 0 0 !important; }
+
   #iFooter {
     height: 180px; }
     #iFooter .footer-icon {
