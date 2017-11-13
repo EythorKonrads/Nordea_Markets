@@ -464,7 +464,7 @@ button:focus {
 
 .chartButtons {
   flex-direction: column;
-  margin-right: 50px; }
+  margin: 30px 50px; }
 
 #btnClickRate {
   background-color: #36A2EB; }
@@ -481,7 +481,7 @@ button:focus {
   color: white; }
 
 #iChartClickRate, #iChartSession, #iChartBounceRate {
-  width: 1000px; }
+  width: 100% !important; }
 
 /**************************  DOUGHNUT AND STATS  ****************************/
 #iBottomDashBoard {
@@ -690,7 +690,6 @@ button:focus {
     max-width: 123px;
     text-align: center;
     height: 31px;
-    width: 131px;
     color: #FFFFFF;
     font-family: "Source Sans Pro";
     font-size: 24px;
@@ -717,7 +716,8 @@ button:focus {
   #iTopDashBoard {
     flex-direction: column-reverse; }
     #iTopDashBoard .chartButtons {
-      flex-direction: row; }
+      flex-direction: row;
+      margin-right: 0px; }
 
   #quoteBanner {
     justify-content: space-evenly; }
@@ -753,11 +753,30 @@ button:focus {
       justify-content: center;
       margin-top: 0px; }
     #iFooter h3 {
-      font-size: 18px; }
+      font-size: 18px;
+      margin: 0; }
     #iFooter p {
       display: none; }
     #iFooter img {
       width: 80px; } }
+@media screen and (max-width: 900px) {
+  #iBottomDashBoard {
+    flex-direction: column; }
+
+  .dashBoardBoxContainer {
+    width: 100%; }
+
+  #iChartReaders {
+    width: 100%; }
+
+  .carousel__container {
+    max-width: 666px; }
+
+  #iTopDashBoard {
+    flex-direction: column-reverse; }
+    #iTopDashBoard .chartButtons {
+      flex-direction: row;
+      margin-right: 0px; } }
 body {
   background: white !important; }
 
