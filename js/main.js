@@ -250,11 +250,10 @@ for (var i = 0; i < abtnShowChart.length; i++) {
         btnClose.addEventListener('click', function () {
           console.log('close');
           authorArticles.style.display = "none"
-          var articlesContainer = document.getElementById('articles-container');
-            articlesContainer.style.display = "grid"
 
         })
       }
+
     }
 
     btnCompareByAuthor.addEventListener('click', getAuthorArticles);

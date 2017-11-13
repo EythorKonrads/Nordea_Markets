@@ -1,5 +1,5 @@
 body{
-  background: white!important;
+  background: white;
 }
 
 .auther{
@@ -126,6 +126,7 @@ body{
 
 /* Show articles onClick */
 .show-articles-container {
+  z-index: 3;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
