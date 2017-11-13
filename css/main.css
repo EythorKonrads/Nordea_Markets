@@ -449,6 +449,12 @@ button:focus {
 .cChart {
   display: none; }
 
+.top-box-mobile {
+  display: none; }
+
+.top-data-boxes {
+  display: none; }
+
 .displayChart {
   display: flex;
   z-index: 1;
@@ -741,16 +747,53 @@ canvas {
     width: 100% !important;
     margin: 0 auto; }
 
-  .chartjs-render-monitor {
-    width: 100% !important;
-    margin: 0 auto;
-    height: 250px; }
-
   #iTopDashBoard {
-    flex-direction: column-reverse; }
-    #iTopDashBoard .chartButtons {
-      flex-direction: row;
-      margin-right: 0px; }
+    padding: 0; }
+
+  .top-box-mobile {
+    display: flex;
+    flex-direction: column; }
+    .top-box-mobile h2 {
+      color: white;
+      font-family: "Source Sans Pro";
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 45px;
+      text-align: center; }
+    .top-box-mobile p {
+      color: white;
+      font-family: "Source Sans Pro";
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center; }
+
+  .top-text-box {
+    background-color: #3cba9f;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+  .top-data-boxes {
+    display: flex;
+    flex-direction: row; }
+    .top-data-boxes .box {
+      height: 150px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .top-data-boxes .box-1 {
+      background-color: #36A2EB; }
+    .top-data-boxes .box-2 {
+      background-color: #FA6384; }
+    .top-data-boxes .box-3 {
+      background-color: #FFA24E; }
+
+  #iTopDashBoard .chartButtons {
+    display: none; }
+  #iTopDashBoard .cChart {
+    display: none; }
 
   #quoteBanner {
     justify-content: space-evenly; }
