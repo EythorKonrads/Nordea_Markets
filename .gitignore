@@ -26,3 +26,8 @@ Temporary Items
 ### Sass ###
 .sass-cache/
 css/style.css.map
+
+### npm ###
+node_modules/
+package-lock.json
+package.json
