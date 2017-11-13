@@ -13,6 +13,7 @@ body{
   display: flex;
   flex-direction: row;
   align-items: end;
+
   .autherBoxImage{
     background-image:  url('.././img/jane.png');
     background-position: center;
@@ -25,6 +26,7 @@ body{
 
   }
 }
+
 .autherBoxInfo{
   padding: 20px;
   padding-top: 0px;
@@ -56,6 +58,7 @@ body{
   display: flex;
   flex-direction: row;
   margin: 20px;
+
   #btnCompareArticle, #btnCompareDate{
     display: flex;
     justify-content: center;
@@ -126,7 +129,8 @@ body{
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
   top: 0;
-  right: 0px;
+  bottom: 0;
+  right: 0;
   left: 0;
 }
 
@@ -142,6 +146,8 @@ body{
 .container{
   width: calc(100% - 100px);
   margin: 0 auto;
+  position: relative;
+  padding-bottom: 3rem;
 }
 
 @media screen and (max-width: 900px){
@@ -151,12 +157,13 @@ body{
     // max-width: 600px;
     // margin: 0 auto;
   }
+
 }
 
 
 
 
-
+.compare-articles-container,
 .articles-container{
   width: 100% !important;
   max-width: none!important;
@@ -192,8 +199,30 @@ body{
     margin: 0 auto;
   }
 
-  .autherBoxImage{
-    display: none;
+  .auther {
+    margin-top: 20px;
+  }
+
+  .autherBox{
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    .autherBoxImage{
+      width: 65px;
+      height: auto;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    .autherBoxInfo h3 {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
   }
   #iChartVisitors{
     display: none;
@@ -201,37 +230,45 @@ body{
   .btnShowChart:nth-last-child(1){
     display: none;
   }
-
+  .compare-articles-container,
   .articles-container{
     .card{
       flex-direction: column!important;
+      border-top: none;
+      border-bottom: 1px solid #E2E5E8;
       .article-thumb-left{
         padding: 0!important;
-        margin: 0!important;
-        width: 100%!important;
+        margin: 0 auto !important;
+        width: 90%!important;
         height: 200px!important;
       }
     }
   }
 
+  .article-header {
+    flex-direction: column;
+    margin: 0 0 18px 0;
+  }
+
   .filter{
-    justify-content: center;
-    .filterBox{
-      flex-direction: column;
-      width: 100%;
-      #btnCompareArticle, #btnCompareDate{
-        margin-right: 0px;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
+    display: none;
+    // justify-content: center;
+    // .filterBox{
+    //   flex-direction: column;
+    //   width: 100%;
+    //   #btnCompareArticle, #btnCompareDate{
+    //     margin-right: 0px;
+    //     margin-bottom: 20px;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //   }
+    // }
   }
 
   .line {
       width:100%;
-      margin: 40px 0px;
+      // margin: 40px 0px;
   }
 
 }

@@ -113,6 +113,28 @@ body {
 .btn-red {
   background-color: #EE6C5E; }
 
+.btn-back {
+  margin-top: 1rem;
+  margin-left: 1rem; }
+  .btn-back a {
+    text-decoration: none;
+    color: #5F5F5F;
+    font-size: 20px; }
+  .btn-back .side-arrow {
+    content: '';
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-top: 0.8em;
+    width: 0.9em;
+    height: 0.9em;
+    border-right: 0.1em solid #5F5F5F;
+    border-bottom: 0.1em solid #5F5F5F;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    margin-right: 4px; }
+
 /******************  Desktop HEADER   *********************/
 .header {
   height: 80px;
@@ -233,7 +255,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  grid-row-gap: 2rem; }
+  grid-row-gap: 2rem;
+  padding-bottom: 3rem; }
 
 .card {
   background-color: #fff;
@@ -289,7 +312,8 @@ body {
   max-width: 975px;
   margin: 0 auto; }
   .article-container article {
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-bottom: 4rem; }
     .article-container article h2 {
       margin: 35px 0; }
     .article-container article .article-image {
@@ -465,6 +489,13 @@ button:focus {
 .chartButtons {
   flex-direction: column;
   margin-right: 50px; }
+
+.chartButtonsAuthor {
+  flex-direction: row; }
+  .chartButtonsAuthor button {
+    color: #5F5F5F;
+    font-size: 1rem;
+    line-height: 3; }
 
 #btnClickRate {
   background-color: #36A2EB; }
@@ -675,11 +706,16 @@ button:focus {
 
 /**************************  FOOTER  ****************************/
 #iFooter {
-  height: 300px;
+  min-height: 300px;
+  height: 100%;
   background-color: #2B2B2B;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding: 30px 0; }
+
   #iFooter p {
     color: white;
     max-width: 123px;
@@ -698,11 +734,13 @@ button:focus {
     line-height: 31px;
     margin: 10px 0; }
 
+.box-footer {
+  margin: 0 20px; }
+
 .footer-icon {
   height: 123px;
   width: 123px;
-  background-color: #2D9EE7;
-  margin-top: 30px; }
+  background-color: #2D9EE7; }
 
 /**************************  MEDIA QUERYS FOR HOME DASHBORAD  ****************************/
 @media screen and (max-width: 900px) {
@@ -720,6 +758,7 @@ button:focus {
 
   #iChartReaders {
     width: 100%; } }
+
 .calendar-container {
   display: flex;
   margin: 0 auto;
@@ -851,6 +890,7 @@ body {
 @media screen and (max-width: 500px) {
   .calendar-container {
     display: none; } }
+
 body {
   background: white !important; }
 
@@ -959,7 +999,8 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
   top: 0;
-  right: 0px;
+  bottom: 0;
+  right: 0;
   left: 0; }
 
 /* Card */
@@ -969,14 +1010,18 @@ body {
 
 .container {
   width: calc(100% - 100px);
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 3rem; }
 
 @media screen and (max-width: 900px) {
   .container {
     width: calc(100% - 50px); } }
+.compare-articles-container,
 .articles-container {
   width: 100% !important;
   max-width: none !important; }
+  .compare-articles-container .card,
   .articles-container .card {
     width: 100% !important; }
 
@@ -995,8 +1040,24 @@ body {
     width: 100% !important;
     margin: 0 auto; }
 
-  .autherBoxImage {
-    display: none; }
+  .auther {
+    margin-top: 20px; }
+
+  .autherBox {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end; }
+    .autherBox .autherBoxImage {
+      width: 65px;
+      height: auto;
+      border-radius: 50%;
+      margin: 0 auto; }
+    .autherBox .autherBoxInfo h3 {
+      text-align: center;
+      margin-top: 1rem; }
 
   #iChartVisitors {
     display: none; }
@@ -1004,29 +1065,27 @@ body {
   .btnShowChart:nth-last-child(1) {
     display: none; }
 
+  .compare-articles-container .card,
   .articles-container .card {
-    flex-direction: column !important; }
+    flex-direction: column !important;
+    border-top: none;
+    border-bottom: 1px solid #E2E5E8; }
+    .compare-articles-container .card .article-thumb-left,
     .articles-container .card .article-thumb-left {
       padding: 0 !important;
-      margin: 0 !important;
-      width: 100% !important;
+      margin: 0 auto !important;
+      width: 90% !important;
       height: 200px !important; }
 
+  .article-header {
+    flex-direction: column;
+    margin: 0 0 18px 0; }
+
   .filter {
-    justify-content: center; }
-    .filter .filterBox {
-      flex-direction: column;
-      width: 100%; }
-      .filter .filterBox #btnCompareArticle, .filter .filterBox #btnCompareDate {
-        margin-right: 0px;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; }
+    display: none; }
 
   .line {
-    width: 100%;
-    margin: 40px 0px; } }
+    width: 100%; } }
 .staff-search {
   height: 100%;
   margin: 0 5vw; }
