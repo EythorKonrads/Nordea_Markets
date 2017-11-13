@@ -716,6 +716,7 @@ button:focus {
   flex-wrap: wrap;
   margin-top: 3rem;
   padding: 30px 0; }
+
   #iFooter p {
     color: white;
     max-width: 123px;
@@ -756,6 +757,139 @@ button:focus {
 
   #iChartReaders {
     width: 100%; } }
+
+.calendar-container {
+  display: flex;
+  margin: 0 auto;
+  position: absolute;
+  right: 70px;
+  z-index: -1;
+  visibility: hidden; }
+
+.calendar-container-box {
+  width: 100%;
+  display: flex; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #445566; }
+
+#calendar {
+  background: white;
+  width: 358px;
+  margin: 0 auto;
+  margin-right: 20px;
+  border-radius: 5px;
+  font-family: 'Open Sans',sans-serif;
+  text-align: center;
+  color: #555;
+  box-shadow: 0 0 50px -14px rgba(0, 0, 0, 0.8); }
+
+#calendar h1 {
+  border-radius: 5px 5px 0 0;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #000D5E;
+  cursor: default; }
+
+#calendar:nth-child(1) h1:before {
+  content: "\003c";
+  color: #000D5E;
+  position: relative;
+  font-size: 25px;
+  right: 90px; }
+
+#calendar:nth-child(2) h1:after {
+  content: "\003e";
+  color: #000D5E;
+  position: relative;
+  font-size: 25px;
+  left: 90px; }
+
+#calendar table {
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-spacing: 0;
+  border-radius: 0 0 5px 5px; }
+
+#calendar td {
+  width: 38px;
+  height: 38px;
+  background: #CCF6FF;
+  color: #000D5E;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 6px;
+  cursor: pointer;
+  transition: background .3s;
+  -webkit-transition: background .3s; }
+
+#calendar .lastmonth, #calendar .nextmonth, #calendar .nextmonth ~ * {
+  background: #fff;
+  color: #000D5E; }
+
+#calendar .current {
+  background: #000D5E;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+#calendar .hastask {
+  font-weight: 700; }
+
+#calendar tr:last-of-type td:first-of-type {
+  border-radius: 0 0 0 5px; }
+
+#calendar tr:last-of-type td:last-of-type {
+  border-radius: 0 0 5px 0; }
+
+#days td {
+  border: none;
+  background-color: white;
+  color: #000D5E; }
+
+.activeCalendar {
+  z-index: 1;
+  visibility: visible; }
+
+@media screen and (max-width: 900px) {
+  .calendar-container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0; }
+
+  #calendar {
+    background: white;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-family: 'Open Sans',sans-serif;
+    text-align: center;
+    color: #555;
+    box-shadow: none; }
+
+  #calendar:nth-child(1) h1:before {
+    content: "\003c";
+    color: #000D5E;
+    position: relative;
+    font-size: 25px;
+    right: 60px; }
+
+  #calendar:nth-child(2) h1:after {
+    content: "\003e";
+    color: #000D5E;
+    position: relative;
+    font-size: 25px;
+    left: 60px; } }
+@media screen and (max-width: 500px) {
+  .calendar-container {
+    display: none; } }
+
 body {
   background: white !important; }
 
@@ -779,8 +913,6 @@ body {
     max-height: 180px;
     height: 100%;
     width: 100%; }
-  .autherBox .search-results__img {
-    display: none; }
 
 .autherBoxInfo {
   padding: 20px;
@@ -907,6 +1039,9 @@ body {
     width: 100% !important;
     margin: 0 auto; }
 
+  .auther {
+    margin-top: 20px; }
+
   .autherBox {
     width: 100%;
     max-width: 770px;
@@ -915,7 +1050,13 @@ body {
     flex-direction: column;
     align-items: end; }
     .autherBox .autherBoxImage {
-      display: none; }
+      width: 65px;
+      height: auto;
+      border-radius: 50%;
+      margin: 0 auto; }
+    .autherBox .autherBoxInfo h3 {
+      text-align: center;
+      margin-top: 1rem; }
 
   #iChartVisitors {
     display: none; }
@@ -925,29 +1066,25 @@ body {
 
   .compare-articles-container .card,
   .articles-container .card {
-    flex-direction: column !important; }
+    flex-direction: column !important;
+    border-top: none;
+    border-bottom: 1px solid #E2E5E8; }
     .compare-articles-container .card .article-thumb-left,
     .articles-container .card .article-thumb-left {
       padding: 0 !important;
-      margin: 0 !important;
-      width: 100% !important;
+      margin: 0 auto !important;
+      width: 90% !important;
       height: 200px !important; }
 
+  .article-header {
+    flex-direction: column;
+    margin: 0 0 18px 0; }
+
   .filter {
-    justify-content: center; }
-    .filter .filterBox {
-      flex-direction: column;
-      width: 100%; }
-      .filter .filterBox #btnCompareArticle, .filter .filterBox #btnCompareDate {
-        margin-right: 0px;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; }
+    display: none; }
 
   .line {
-    width: 100%;
-    margin: 40px 0px; } }
+    width: 100%; } }
 .staff-search {
   height: 100%;
   margin: 0 5vw; }
