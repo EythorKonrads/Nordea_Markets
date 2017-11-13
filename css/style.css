@@ -621,7 +621,7 @@ button:focus {
 
 /**************************  CAROUSEL FOR ARTICLES  ****************************/
 .iCarouselArticles {
-  padding: 70px 0px;
+  padding: 60px 0px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -672,7 +672,8 @@ button:focus {
 .carousel__item {
   text-align: center;
   line-height: 100px;
-  border: 1px solid #fff; }
+  border: 1px solid #fff;
+  padding: 0 10px; }
 
 .carousel-image {
   display: flex;
@@ -744,10 +745,8 @@ button:focus {
 /**************************  MEDIA QUERYS FOR HOME DASHBORAD  ****************************/
 @media screen and (max-width: 900px) {
   .carousel__container {
-    max-width: 900px; }
-
-  .carousel-image {
-    width: 450px; }
+    max-width: 900px;
+    width: 100%; }
 
   #iBottomDashBoard {
     flex-direction: column; }
