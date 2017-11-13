@@ -238,7 +238,9 @@ for (var i = 0; i < abtnShowChart.length; i++) {
 
   /******  Expand Articles  ******/
     var authorArticles = document.getElementById('showArticles');
+
     function getAuthorArticles() {
+      var articlesContainer = document.querySelector(".articles-container");
       if (authorArticles.style.display == "none") {
         authorArticles.style.display = "block";
 
@@ -251,6 +253,7 @@ for (var i = 0; i < abtnShowChart.length; i++) {
 
         })
       }
+
     }
 
     btnCompareByAuthor.addEventListener('click', getAuthorArticles);
