@@ -27,7 +27,6 @@ Temporary Items
 .sass-cache/
 css/style.css.map
 
-<<<<<<< HEAD
 ### npm ###
 node_modules/
 package-lock.json
@@ -35,5 +34,3 @@ package.json
 =======
 css/style.css
 
-css/style.css
->>>>>>> 430bb54349ea20140428f23a99933394f499c329
