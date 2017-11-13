@@ -206,7 +206,7 @@ body{
   .autherBox{
     width: 100%;
     max-width: 770px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -224,6 +224,7 @@ body{
     }
 
   }
+
   #iChartVisitors{
     display: none;
   }
@@ -252,18 +253,50 @@ body{
 
   .filter{
     display: none;
-    // justify-content: center;
-    // .filterBox{
-    //   flex-direction: column;
-    //   width: 100%;
-    //   #btnCompareArticle, #btnCompareDate{
-    //     margin-right: 0px;
-    //     margin-bottom: 20px;
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //   }
-    // }
+  }
+
+  .chart {
+    display: none;
+  }
+
+  .dashBoardBoxContainer-auther {
+
+    .box {
+      height: 161px;
+      display: flex;
+      justify-content: normal;
+      position: relative;
+
+      h2 {
+        margin-top: 0;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .box-data {
+        margin: 0 auto;
+
+
+
+        h4 {
+          text-align: inherit;
+          margin-left: 1rem;
+          font-weight: 300;
+        }
+
+      }
+
+
+      p {
+        font-size: 12px;
+        position: absolute;
+        bottom: 1rem;
+      }
+
+    }
+
+
   }
 
   .line {
