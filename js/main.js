@@ -238,7 +238,9 @@ for (var i = 0; i < abtnShowChart.length; i++) {
 
   /******  Expand Articles  ******/
     var authorArticles = document.getElementById('showArticles');
+
     function getAuthorArticles() {
+      var articlesContainer = document.querySelector(".articles-container");
       if (authorArticles.style.display == "none") {
         authorArticles.style.display = "block";
 
@@ -248,6 +250,8 @@ for (var i = 0; i < abtnShowChart.length; i++) {
         btnClose.addEventListener('click', function () {
           console.log('close');
           authorArticles.style.display = "none"
+          var articlesContainer = document.getElementById('articles-container');
+            articlesContainer.style.display = "grid"
 
         })
       }

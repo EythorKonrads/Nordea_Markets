@@ -21,9 +21,9 @@
         </div>
         <div class="sidebarNav">
           <ul>
-            <li>Item 1</li>
+            <li><a href="dashboard.html"></a>Dashboard</li>
             <li>Item 2</li>
-            <li>Item 3</li>
+            <li><a href="auther.html"></a>Author</li>
           </ul>
         </div>
       </div>
@@ -90,9 +90,16 @@
     </div>
     <!-- Auther  -->
     <div class="container">
+
+        <div class="btn-back">
+            <span class="side-arrow"></span>
+            <a href="author-search.html">Authors</a>
+        </div>
+
       <div class="auther">
       <div class="autherBox">
-        <div class="autherBoxImage" ></div>
+        <div class="autherBoxImage"></div>
+
         <div class="autherBoxInfo">
           <h3>Jane Doe</h3>
           <p>Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at, sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore civibus.</p>
@@ -327,12 +334,12 @@
             <canvas id="ChartUserInfo" ></canvas>
           </div>
 
-          <div class="chartButtons">
-            <button id="default" class="btnShowChart" data-showThisChart="iChartVisitors" checked>Visitors</button>
-            <button class="btnShowChart" data-showThisChart="iChartClickRate">Click Rate<br>(int) %</button>
-            <button class="btnShowChart" data-showThisChart="iChartSession">Avg Session<br>(int) min</button>
-            <button class="btnShowChart" data-showThisChart="iChartBounceRate">Bounce Rate<br>(int) %</button>
-            <button class="btnShowChart" data-showThisChart="iChartUserInfo">User Info</button>
+          <div class="chartButtons chartButtonsAuthor">
+            <button id="default" class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartVisitors" checked>Visitors<br>(int) %</button>
+            <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartClickRate">Click Rate<br>(int) %</button>
+            <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartSession">Avg Session<br>(int) min</button>
+            <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartBounceRate">Bounce Rate<br>(int) %</button>
+            <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartUserInfo">User Info</button>
           </div>
         </div>
       </div>
@@ -341,7 +348,7 @@
 
 
 
-    <section class="articles-container">
+    <section id="articles-container" class="articles-container">
         <!-- CARDS -->
         <div class="article-card-wrapper">
             <a href="single-article.html" class="card">
@@ -448,36 +455,79 @@
 
     </div>
 
+    <div id="iFooter">
+        <div class="box-footer">
+            <div class="footer-icon">
+                <img src="img/insights-footer.svg">
+            </div>
+            <div class="footer-text">
+                <h3>Insights</h3>
+                <p>Our podcasts
+                    <br> Customer stories
+                    <br> Webinars and events</p>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="footer-icon">
+                <img src="img/our-services-footer.svg">
+            </div>
+            <div class="footer-text">
+                <h3>Our services</h3>
+                <p>On regulations
+                    <br> Our services</p>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="footer-icon">
+                <img src="img/about-footer.svg">
+            </div>
+            <div class="footer-text">
+                <h3>About</h3>
+                <p>Proven performance
+                    <br> Our story</p>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="footer-icon">
+                <img src="img/career-footer.svg">
+            </div>
+            <div class="footer-text">
+                <h3>Career</h3>
+                <p>Blog
+                    <br> Graduates
+                    <br> Students & interns</p>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="footer-icon">
+                <img src="img/address-footer.svg">
+            </div>
+            <div class="footer-text">
+                <h3>Contact</h3>
+                <p>Nordea Markets
+                    <br> Grønjordsvej 10
+                    <br> 2300 Copenhagen S
+                    <br> Phone: 3333 3333</p>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
     <script src="js/main.js"></script>
     <script>
 
-    // window.onload() = function(){
-    //   displayCalendar();
-    //   console.log("sup")
-    // }
-
-    // window.addEventListener("load", function(){
-    //   displayCalendar();
-    //   console.log("sup")
-    // })
-
-    // btnCompareDate.addEventListener("click", function(){
-    //   var calendarContainer = document.getElementById("calendar-container");
-    //   if(calendarContainer.style.display = "none"){
-    //     calendarContainer.style.display = "flex"
-    //   }else{
-    //       calendarContainer.style.display = "none"
-    //   }
-    //
-    // })
-
     /******  btnDate ******/
     btnCompareDate.addEventListener("click", function(){
       var calendarContainer = document.querySelector(".calendar-container");
         calendarContainer.classList.toggle("activeCalendar");
+
+    })
+
+    btnCompareByAuthor.addEventListener("click", function(){
+      var articlesContainer = document.getElementById('articles-container');
+        articlesContainer.style.display = "none"
 
     })
 
@@ -504,6 +554,14 @@
           var userMenuNav = document.querySelector(".userMenuNav");
           userMenuNav.classList.remove("activeUserNav");
       })
+      
+    window.onload = function(){
+
+      document.getElementById('default').click();
+
+    }
+
+
 
 
     </script>

@@ -1,8 +1,8 @@
 /*********************************** DISPLAY CHART ON LOAD   ***********************************/
 
 window.onload = function(){
-    document.getElementById('ChartClickRate').click();
-  }
+    document.getElementById('btnClickRate').click();
+  };
 
 /*********************************** CLICK RATE CHART   ***********************************/
 
@@ -172,8 +172,8 @@ $(".js-carousel").each(function(){
             } else {
                 moveto = (before >= 0) ? 0 : curPos + containerWidth;
             }
-            
-            
+
+
             $carouselList.animate({
                 left: moveto
             });
@@ -182,7 +182,7 @@ $(".js-carousel").each(function(){
         setItemWidth();
     });
     setItemWidth();
-    
+
     $carouselButton.on("click", slide);
 });
 

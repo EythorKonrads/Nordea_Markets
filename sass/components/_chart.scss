@@ -29,15 +29,26 @@ button:focus{
 #chartContainer {
 	width: $containerWidth;
 	margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
+	#iChartClickRate, #iChartSession, #iChartBounceRate {
+	  width:auto;
+	}
+	.chartButtons {
+		margin: 30px 0;
+		display: flex;
+		justify-content: space-around;
+    flex-direction: row;
+		.btnShowChart{
+			color:black;
+			 &:focus{
+				 color:white
+			}
+		}
+	}
 }
 
-.chartButtons {
-	margin: 30px 0;
-	display: flex;
-	justify-content: space-around;
-}
+
 
  .displayChart {
 	display: flex;
