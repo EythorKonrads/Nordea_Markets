@@ -706,12 +706,15 @@ button:focus {
 
 /**************************  FOOTER  ****************************/
 #iFooter {
-  height: 300px;
+  min-height: 300px;
+  height: 100%;
   background-color: #2B2B2B;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 3rem; }
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding: 30px 0; }
   #iFooter p {
     color: white;
     max-width: 123px;
@@ -730,11 +733,13 @@ button:focus {
     line-height: 31px;
     margin: 10px 0; }
 
+.box-footer {
+  margin: 0 20px; }
+
 .footer-icon {
   height: 123px;
   width: 123px;
-  background-color: #2D9EE7;
-  margin-top: 30px; }
+  background-color: #2D9EE7; }
 
 /**************************  MEDIA QUERYS FOR HOME DASHBORAD  ****************************/
 @media screen and (max-width: 900px) {
@@ -787,6 +792,9 @@ body {
     font-size: 18px; }
   .autherBoxInfo p:nth-child(3) {
     padding-top: 15px; }
+
+.dashBoardBoxContainer-author {
+  display: none; }
 
 /* Filter */
 .filter {
@@ -890,6 +898,9 @@ body {
 #chartContainer {
   width: 100% !important; }
 
+.dashBoardBoxContainer-author {
+  display: none; }
+
 .line {
   width: calc(100% - 15px);
   height: 2px;
@@ -907,7 +918,7 @@ body {
   .autherBox {
     width: 100%;
     max-width: 770px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     display: flex;
     flex-direction: column;
     align-items: end; }
@@ -944,6 +955,32 @@ body {
 
   .filter {
     display: none; }
+
+  .chart {
+    display: none; }
+
+  .dashBoardBoxContainer-author {
+    display: flex; }
+    .dashBoardBoxContainer-author .box {
+      height: 161px;
+      display: flex;
+      justify-content: normal;
+      position: relative; }
+      .dashBoardBoxContainer-author .box h2 {
+        margin-top: 0;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600; }
+      .dashBoardBoxContainer-author .box .box-data {
+        margin: 0 auto; }
+        .dashBoardBoxContainer-author .box .box-data h4 {
+          text-align: inherit;
+          margin-left: 1rem;
+          font-weight: 300; }
+      .dashBoardBoxContainer-author .box p {
+        font-size: 12px;
+        position: absolute;
+        bottom: 1rem; }
 
   .line {
     width: 100%; } }
