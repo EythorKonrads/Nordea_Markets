@@ -6,6 +6,7 @@ body{
   display: flex;
   margin-top: 50px;
 }
+
 .autherBox{
   width: 100%;
   max-width: 770px;
@@ -41,6 +42,10 @@ body{
   p:nth-child(3){
     padding-top: 15px;
   }
+}
+
+.dashBoardBoxContainer-author {
+  display: none;
 }
 
 /* Filter */
@@ -180,7 +185,9 @@ body{
 
 }
 
-
+.dashBoardBoxContainer-author {
+  display: none;
+}
 
 
 .line{
@@ -259,7 +266,8 @@ body{
     display: none;
   }
 
-  .dashBoardBoxContainer-auther {
+  .dashBoardBoxContainer-author {
+    display: flex;
 
     .box {
       height: 161px;
