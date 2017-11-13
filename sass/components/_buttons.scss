@@ -67,4 +67,33 @@
     background-color: $btnNoColor;
 }
 
+// Single author back button
+.btn-back {
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+    a {
+        text-decoration: none;
+        color: $txtFilterColor;
+        font-size: $articleH2;
+    }
+
+
+    .side-arrow {
+        content: '';
+        border-radius: 2px;
+        position: relative;
+        display: inline-block;
+        margin-top: 0.8em;
+        width: 0.9em;
+        height: 0.9em;
+        border-right: 0.1em solid $txtFilterColor;
+        border-bottom: 0.1em solid $txtFilterColor;
+        -moz-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        margin-right: 4px;
+    }
+}
+
 

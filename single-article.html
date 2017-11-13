@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="css/main.css" rel="stylesheet"> -->
 </head>
 <body>
 
@@ -21,11 +22,11 @@
           </div>
         </div>
         <div class="sidebarNav">
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ul>
+            <ul>
+                <li><a href="dashboard.html"></a>Dashboard</li>
+                <li>Item 2</li>
+                <li><a href="auther.html"></a>Author</li>
+            </ul>
         </div>
       </div>
       <div class="headerContainer">
@@ -91,6 +92,13 @@
     </div>
     <!-- Auther  -->
     <div class="container">
+
+            <div class="btn-back">
+                <span class="side-arrow"></span>
+                <a href="auther.html">Janne</a>
+            </div>
+
+
       <div class="auther">
       <div class="autherBox">
         <div class="autherBoxImage" ></div>
@@ -126,39 +134,188 @@
 
       </div>
 
+      <!-- Article expand onClick -->
+      <div id="showArticles" class="show-articles-container">
+            <section class="compare-articles-container">
+                <div class="compare-articles-inner">
 
-<div class="article-container">
+                    <span id="btnClose" class="btn-close"></span>
+
+                    <h1 class="h1-page-title">Compare to another article</h1>
+
+                    <!-- Search box -->
+                    <div class="search-box">
+                        <span class="icon">
+                            <i class="fa fa-search fa-2x"></i>
+                        </span>
+                        <input type="search" id="article-search" placeholder="Search for name, date  or text" />
+                    </div>
+
+                    <!-- CARDS -->
+                    <div id="clickToCompare" class="article-card-wrapper">
+
+                        <!-- COMPARE OVERLAY -->
+                        <div id="compareOverlay" class="compare-overlay" data-showCompare="compareOverlay">
+                            <div class="compare-question-box">
+
+                                <p>Are you shure you want to compare this article?</p>
+                                <div class="compare-button-box">
+                                    <button class="btn-sure btn-green">Yes</button>
+                                    <button class="btn-sure btn-red">No</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="iCard" class="card">
+                            <!-- INNER LEFT -->
+                            <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                                <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                            </div>
+                            <!-- INNER RIGHT -->
+                            <article class="card-inner-right">
+                                <div class="article-header">
+                                    <span class="article-date">08.02.2017</span>
+                                    <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                                </div>
+                                <p class="article-paragraph">
+                                    Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                    sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                    civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                    eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- CARDS -->
+                    <div class="article-card-wrapper">
+                        <a href="#" class="card">
+                            <!-- INNER LEFT -->
+                            <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                                <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                            </div>
+                            <!-- INNER RIGHT -->
+                            <article class="card-inner-right">
+                                <div class="article-header">
+                                    <span class="article-date">08.02.2017</span>
+                                    <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                                </div>
+                                <p class="article-paragraph">
+                                    Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                    sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                    civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                    eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                                </p>
+                            </article>
+                        </a>
+                    </div>
+                    <!-- CARDS -->
+                    <div class="article-card-wrapper">
+                        <a href="single-article.html" class="card">
+                            <!-- INNER LEFT -->
+                            <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                                <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                            </div>
+                            <!-- INNER RIGHT -->
+                            <article class="card-inner-right">
+                                <div class="article-header">
+                                    <span class="article-date">08.02.2017</span>
+                                    <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                                </div>
+                                <p class="article-paragraph">
+                                    Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                    sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                    civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                    eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                                </p>
+                            </article>
+                        </a>
+                    </div>
+                    <!-- CARDS -->
+                    <div class="article-card-wrapper">
+                        <a href="" class="card">
+                            <!-- INNER LEFT -->
+                            <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                                <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                            </div>
+                            <!-- INNER RIGHT -->
+                            <article class="card-inner-right">
+                                <div class="article-header">
+                                    <span class="article-date">08.02.2017</span>
+                                    <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                                </div>
+                                <p class="article-paragraph">
+                                    Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                    sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                    civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                    eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                                </p>
+                            </article>
+                        </a>
+                    </div>
+                    <!-- CARDS -->
+                    <div class="article-card-wrapper">
+                        <a href="" class="card">
+                            <!-- INNER LEFT -->
+                            <div class="article-thumb-left" style="background-image: url(https://goo.gl/6dKL7r)">
+                                <!-- <img class="article-thumb" src="https://goo.gl/6dKL7r" alt=""> -->
+                            </div>
+                            <!-- INNER RIGHT -->
+                            <article class="card-inner-right">
+                                <div class="article-header">
+                                    <span class="article-date">08.02.2017</span>
+                                    <h2 class="article-title">Bonds: Almost like watching paint dry</h2>
+                                </div>
+                                <p class="article-paragraph">
+                                    Lorem ipsum dolor sit amet, quo in dictas inermis, vix in stet impedit expetenda. Vix id velit audire. Harum movet nec at,
+                                    sale virtute feugiat est in, at impedit sententiae sea. Eos ut choro ridens. Has ex elitr nemore
+                                    civibus. Per mutat cetero platonem id. Ne nonumes volumus torquatos sed. Ad agam persequeris
+                                    eam. Eos ut delectus comprehensam, errem reprehendunt vel et.
+                                </p>
+                            </article>
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </div>
 
     <!-- Chart -->
     <div class="chart">
-            <div id="chartContainer">
-              <div id="iChartVisitors" class="cChart">
-              <canvas id="ChartVisitors" ></canvas>
-            </div>
-             <div id="iChartClickRate" class="cChart">
-              <canvas id="ChartClickRate" ></canvas>
-            </div>
-            <div id="iChartSession" class="cChart">
-              <canvas id="ChartSession" ></canvas>
-            </div>
-            <div id="iChartBounceRate" class="cChart">
-              <canvas id="ChartBounceRate" ></canvas>
-            </div>
-            <div id="iChartUserInfo" class="cChart">
-              <canvas id="ChartUserInfo" ></canvas>
-            </div>
-
-            <div class="chartButtons">
-              <button id="default" class="btnShowChart" data-showThisChart="iChartVisitors" checked>Visitors</button>
-              <button class="btnShowChart" data-showThisChart="iChartClickRate">Click Rate<br>(int) %</button>
-              <button class="btnShowChart" data-showThisChart="iChartSession">Avg Session<br>(int) min</button>
-              <button class="btnShowChart" data-showThisChart="iChartBounceRate">Bounce Rate<br>(int) %</button>
-              <button class="btnShowChart" data-showThisChart="iChartUserInfo">User Info</button>
-            </div>
-          </div>
+        <div id="chartContainer">
+            <div id="iChartVisitors" class="cChart">
+            <canvas id="ChartVisitors" ></canvas>
+        </div>
+            <div id="iChartClickRate" class="cChart">
+            <canvas id="ChartClickRate" ></canvas>
+        </div>
+        <div id="iChartSession" class="cChart">
+            <canvas id="ChartSession" ></canvas>
+        </div>
+        <div id="iChartBounceRate" class="cChart">
+            <canvas id="ChartBounceRate" ></canvas>
+        </div>
+        <div id="iChartUserInfo" class="cChart">
+            <canvas id="ChartUserInfo" ></canvas>
         </div>
 
-    <div class="blue-line"></div>
+        <div class="chartButtons chartButtonsAuthor">
+            <button id="default" class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartVisitors" checked>Visitors<br>(int) %</button>
+            <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartClickRate">Click Rate<br>(int) %</button>
+            <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartSession">Avg Session<br>(int) min</button>
+            <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartBounceRate">Bounce Rate<br>(int) %</button>
+            <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartUserInfo">User Info</button>
+        </div>
+        </div>
+</div>
+
+    <div class="line"></div>
+
+
+<div class="article-container">
 
     <article>
 
@@ -184,8 +341,66 @@
         </p>
     </article>
 
+
+
 </div>
 
+<div id="iFooter">
+    <div class="box-footer">
+        <div class="footer-icon">
+            <img src="img/insights-footer.svg">
+        </div>
+        <div class="footer-text">
+            <h3>Insights</h3>
+            <p>Our podcasts
+                <br> Customer stories
+                <br> Webinars and events</p>
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="footer-icon">
+            <img src="img/our-services-footer.svg">
+        </div>
+        <div class="footer-text">
+            <h3>Our services</h3>
+            <p>On regulations
+                <br> Our services</p>
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="footer-icon">
+            <img src="img/about-footer.svg">
+        </div>
+        <div class="footer-text">
+            <h3>About</h3>
+            <p>Proven performance
+                <br> Our story</p>
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="footer-icon">
+            <img src="img/career-footer.svg">
+        </div>
+        <div class="footer-text">
+            <h3>Career</h3>
+            <p>Blog
+                <br> Graduates
+                <br> Students & interns</p>
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="footer-icon">
+            <img src="img/address-footer.svg">
+        </div>
+        <div class="footer-text">
+            <h3>Contact</h3>
+            <p>Nordea Markets
+                <br> Grønjordsvej 10
+                <br> 2300 Copenhagen S
+                <br> Phone: 3333 3333</p>
+        </div>
+    </div>
+</div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
