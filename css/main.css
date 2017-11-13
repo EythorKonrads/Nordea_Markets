@@ -761,10 +761,11 @@ button:focus {
       width: 80px; } }
 @media screen and (max-width: 900px) {
   #iBottomDashBoard {
-    flex-direction: column; }
+    flex-direction: column-reverse; }
 
   .dashBoardBoxContainer {
-    width: 100%; }
+    width: 100%;
+    flex-wrap: nowrap; }
 
   #iChartReaders {
     width: 100%; }
@@ -774,6 +775,8 @@ button:focus {
 
   #iTopDashBoard {
     flex-direction: column-reverse; }
+    #iTopDashBoard .btnShowChart {
+      height: 50px; }
     #iTopDashBoard .chartButtons {
       flex-direction: row;
       margin-right: 0px; } }

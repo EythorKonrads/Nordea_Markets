@@ -434,11 +434,13 @@
 @media screen and (max-width: 900px) {
 
 	#iBottomDashBoard {
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 
 	.dashBoardBoxContainer {
 		width: 100%;
+		flex-wrap: nowrap;
+		
 	}
 
 	#iChartReaders {
@@ -451,6 +453,10 @@
 
 	#iTopDashBoard {
 		flex-direction: column-reverse;
+
+		.btnShowChart {
+			height: 50px;
+		}
 
 		.chartButtons{
 			flex-direction: row;
