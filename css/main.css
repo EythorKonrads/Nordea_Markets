@@ -766,6 +766,10 @@ button:focus {
   .dashBoardBoxContainer {
     width: 100%;
     flex-wrap: nowrap; }
+    .dashBoardBoxContainer .box {
+      height: 250px; }
+      .dashBoardBoxContainer .box h2 {
+        margin-top: 35px; }
 
   #iChartReaders {
     width: 100%; }

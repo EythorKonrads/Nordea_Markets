@@ -440,6 +440,14 @@
 	.dashBoardBoxContainer {
 		width: 100%;
 		flex-wrap: nowrap;
+
+		.box {
+			height: 250px;
+
+			h2 {
+				margin-top: 35px;				
+			}
+		}
 		
 	}
 
