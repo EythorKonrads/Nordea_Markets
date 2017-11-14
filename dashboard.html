@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/main.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	<title>Dash board</title>
@@ -113,12 +114,18 @@
 					</div>
 				</div>
 			</div>
+
+<div class="container">
+	<div id="disa" >
+
+
 			<div class="chartButtons">
 				<button id="btnClickRate" class="btnShowChart" data-showThisChart="iChartClickRate" checked>Click Rate</button>
 				<button id="btnSession" class="btnShowChart" data-showThisChart="iChartSession">Avg Session</button>
 				<button id="btnBounceRate" class="btnShowChart" data-showThisChart="iChartBounceRate">Bounce Rate</button>
 			</div>
 
+		<div id="chartContainer">
 			 <div id="iChartClickRate" class="cChart">
 				<canvas id="ChartClickRate" ></canvas>
 			</div>
@@ -129,6 +136,11 @@
 				<canvas id="ChartBounceRate" ></canvas>
 			</div>
 		</div>
+	</div>
+</div>
+
+
+	</div>
 
 
 		<div id="iBottomDashBoard">
@@ -383,7 +395,7 @@
 		</div>
 
 
-+
+
 
 	<script>
 

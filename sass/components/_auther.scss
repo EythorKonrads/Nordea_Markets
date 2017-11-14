@@ -272,7 +272,7 @@ body{
 
   .dashBoardBoxContainer-author {
     display: flex;
-
+    flex-wrap: wrap;
     .box {
       height: 161px;
       display: flex;
@@ -293,7 +293,8 @@ body{
 
         h4 {
           text-align: inherit;
-          margin-left: 1rem;
+          text-align: center;
+          // margin-left: 1rem;
           font-weight: 300;
         }
 

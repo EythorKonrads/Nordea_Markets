@@ -178,9 +178,9 @@ canvas {
 
     		h4 {
     			height: 60px;
-    			width: 92px;
     			color: #454545;
     			font-family: "Source Sans Pro";
+					padding-left: 10px;
     			font-size: 48px;
     			line-height: 60px;
     			text-align: center;
@@ -194,6 +194,7 @@ canvas {
 
     		.box-data {
     			display: flex;
+					flex-direction: row;
     			align-items: center;
     			margin: 20px 0 20px 0;
 			}
@@ -202,6 +203,16 @@ canvas {
     			height: 32px;
     			width: 32px;
     		}
+	}
+}
+#disa{
+	display: flex;
+
+	#iChartClickRate canvas{
+		width: 100%!important;
+	}
+	.displayChart{
+		max-width:100%!important;
 	}
 }
 
@@ -219,7 +230,7 @@ canvas {
 
     h2 {
 		height: 45px;
-		width: 861px;
+		width: 100%;
 		color: #FFFFFF;
 		font-family: "Source Sans Pro";
 		font-size: 30px;
@@ -294,6 +305,7 @@ canvas {
 	overflow: hidden;
 	height: 440px;
 	max-width: 1000px;
+  width: 100%
 }
 
 .carousel__list{
@@ -414,6 +426,9 @@ canvas {
 
 	#iTopDashBoard {
 		padding: 0;
+		.container{
+			display: none;
+		}
 	}
 
 	.top-box-mobile {
@@ -549,7 +564,7 @@ canvas {
 
 	#iFooter {
 
-		height: 180px;
+		// height: 180px;
 
 		.footer-icon {
 			display: flex;
@@ -574,6 +589,16 @@ canvas {
 }
 
 @media screen and (max-width: 900px) {
+	#disa{
+		flex-direction: column-reverse;
+
+		// #iChartClickRate canvas{
+		// 	width: 100%!important;
+		// }
+		// .displayChart{
+		// 	max-width:100%!important;
+		// }
+	}
 
 	#iBottomDashBoard {
 		flex-direction: column-reverse;
@@ -581,7 +606,7 @@ canvas {
 
 	.dashBoardBoxContainer {
 		width: 100%;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 
 		.box {
 			height: 250px;
@@ -620,6 +645,7 @@ canvas {
 
 	#iTopDashBoard {
 		flex-direction: column-reverse;
+		padding:0 0;
 
 		.btnShowChart {
 			height: 50px;
