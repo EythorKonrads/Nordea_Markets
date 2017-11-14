@@ -2,7 +2,8 @@
 
 window.onload = function(){
     document.getElementById('btnClickRate').click();
-  };
+  }
+
 
 /*********************************** CLICK RATE CHART   ***********************************/
 
@@ -97,7 +98,7 @@ var abtnShowChart = document.getElementsByClassName("btnShowChart");
 
 for (var i = 0; i < abtnShowChart.length; i++) {
     console.log("xx");
-    abtnShowChart[i].addEventListener("click",function(){
+    abtnShowChart[i].addEventListener("click", function (){
         console.log("Chart btn has been clicked");
         // HIDE ALL GRAFS
             var aChart = document.getElementsByClassName( "cChart" );
@@ -121,7 +122,7 @@ for (var i = 0; i < abtnShowChart.length; i++) {
 new Chart(document.getElementById("pie-chart"), {
     type: 'doughnut',
     data: {
-      labels: ["< 18", "19 - 24", "25 - 35", "36 - 45", "46 <"],
+    //   labels: ["< 18", "19 - 24", "25 - 35", "36 - 45", "46 <"],
       datasets: [{
         label: "Population (millions)",
         backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
@@ -130,8 +131,8 @@ new Chart(document.getElementById("pie-chart"), {
     },
     options: {
       title: {
-        display: true,
-        text: 'Age'
+        display: true
+        // text: 'Age'
       },
       legend: {
         position: 'left',
@@ -144,6 +145,8 @@ new Chart(document.getElementById("pie-chart"), {
 
     }
 });
+
+
 
 /***************************************** CAROUSEL *************************************/
 

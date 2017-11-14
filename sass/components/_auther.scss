@@ -234,13 +234,15 @@ body{
 
   }
 
-  #iChartVisitors{
-    display: none;
-  }
-  .btnShowChart:nth-last-child(1){
-    display: none;
-  }
-  .compare-articles-container,
+  #chartContainer {
+    #iChartVisitors{
+      display: none;
+    }
+    .btnShowChart:nth-last-child(1){
+      display: none;
+    }
+}
+
   .articles-container{
     .card{
       flex-direction: column!important;

@@ -1,11 +1,4 @@
 
-/*********************************** CALENDAR ***********************************/
-// Work in process
-// var picker = new Pikaday({ field: document.getElementById('datepicker') });
-// console.log(picker);
-
-
-
 /*********************************** MENU SECTION ***********************************/
     /******  Sidebar ******/
     burgerMenu.addEventListener("click", function(){
@@ -33,7 +26,6 @@
 window.onload = function(){
     document.getElementById('default').click();
   }
-
 
 /*********************************** VISITORS CHART   ***********************************/
 
