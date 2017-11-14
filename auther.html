@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <title></title>
   </head>
   <body>
@@ -126,6 +127,7 @@
               <a id="btnCompareByDate"  class="dropdown-item" href="#date">Date</a>
             </div>
           </div>
+
           <div class="btn-filter" id="btnCompareDate"  >
               <!-- <input type="text" id="datepicker-2months"> -->
               <a>Date will come here</a>
@@ -183,7 +185,7 @@
             <canvas id="ChartUserInfo" ></canvas>
           </div>
 
-          <div class="chartButtons chartButtonsAuthor">
+          <div class="chartButtons ">
             <button id="default" class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartVisitors" checked>Visitors<br>(int) %</button>
             <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartClickRate">Click Rate<br>(int) %</button>
             <button class="btnShowChart btnAuthorShowChart" data-showThisChart="iChartSession">Avg Session<br>(int) min</button>
@@ -193,7 +195,7 @@
         </div>
       </div>
 
-    <div class="dashBoardBoxContainer dashBoardBoxContainer-author">
+      <div class="dashBoardBoxContainer dashBoardBoxContainer-author">
 
         <div class="box">
             <h2>Views</h2>
@@ -261,8 +263,8 @@
     <div class="none-chart">
         <div id="iChartReaders">
             <div class="doughnut-text">
-                    <h2>Age of readers</h2>
-                    <p>In the past month</p>
+                <h2>Age of readers</h2>
+                <p>In the past month</p>
             </div>
             <div class="doughnut-stats">
                 <div class="box box-1">
@@ -278,7 +280,8 @@
                     <p>36 - 45</p>
                 </div>
                 <div class="box box-5">
-                        <p>46 <</p>
+                    <p>46
+                        <</p>
                 </div>
             </div>
             <canvas id="pie-chart" width="800" height="450"></canvas>

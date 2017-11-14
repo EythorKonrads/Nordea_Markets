@@ -15,7 +15,7 @@ body{
   flex-direction: row;
   align-items: end;
 
-  .autherBoxImage{
+  .autherBoxImage {
     background-image:  url('.././img/jane.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -161,6 +161,16 @@ body{
 .none-chart {
   display: none;
 }
+
+#ChartClickRate,
+#ChartSession,
+#ChartBounceRate,
+#ChartUserInfo,
+#ChartVisitors
+ {
+  max-height: 650px;
+}
+
 
 @media screen and (max-width: 900px){
   .container{
