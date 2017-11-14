@@ -449,6 +449,12 @@ button:focus {
 .cChart {
   display: none; }
 
+.top-box-mobile {
+  display: none; }
+
+.top-data-boxes {
+  display: none; }
+
 .displayChart {
   display: flex;
   z-index: 1;
@@ -464,7 +470,7 @@ button:focus {
 
 .chartButtons {
   flex-direction: column;
-  margin-right: 50px; }
+  margin: 30px 50px; }
 
 #btnClickRate {
   background-color: #36A2EB; }
@@ -481,7 +487,7 @@ button:focus {
   color: white; }
 
 #iChartClickRate, #iChartSession, #iChartBounceRate {
-  width: 1000px; }
+  width: 100% !important; }
 
 /**************************  DOUGHNUT AND STATS  ****************************/
 #iBottomDashBoard {
@@ -490,6 +496,7 @@ button:focus {
   width: 100%; }
 
 #iChartReaders {
+  position: relative;
   box-sizing: border-box;
   height: auto;
   width: 50%;
@@ -497,22 +504,54 @@ button:focus {
   background-color: #FAFAFA;
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center; }
   #iChartReaders h2 {
     color: black;
-    width: 100px;
-    margin-top: 33px;
     color: black;
     font-family: "Source Sans Pro";
-    font-size: 30px;
+    font-size: 24px;
     font-style: italic;
     font-weight: 300;
-    line-height: 45px;
+    line-height: 35px;
     text-align: center; }
   #iChartReaders p {
     font-weight: bolder;
-    margin: 30px 0; }
+    font-size: 16px;
+    text-align: center; }
+
+.doughnut-stats {
+  flex-direction: column;
+  display: flex;
+  margin-right: -100px;
+  padding-left: 100px; }
+  .doughnut-stats .box {
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .doughnut-stats p {
+    color: white; }
+  .doughnut-stats .box-1 {
+    background-color: #3e95cd; }
+  .doughnut-stats .box-2 {
+    background-color: #8e5ea2; }
+  .doughnut-stats .box-3 {
+    background-color: #3cba9f; }
+  .doughnut-stats .box-4 {
+    background-color: #e8c3b9; }
+  .doughnut-stats .box-5 {
+    background-color: #c45850; }
+
+canvas {
+  margin-bottom: 30px; }
+
+.doughnut-text {
+  position: absolute;
+  margin: 0 0 0 55px; }
 
 .dashBoardBoxContainer {
   display: flex;
@@ -690,7 +729,6 @@ button:focus {
     max-width: 123px;
     text-align: center;
     height: 31px;
-    width: 131px;
     color: #FFFFFF;
     font-family: "Source Sans Pro";
     font-size: 24px;
@@ -701,16 +739,78 @@ button:focus {
 .footer-icon {
   height: 123px;
   width: 123px;
-  background-color: #2D9EE7;
   margin-top: 30px; }
 
 /**************************  MEDIA QUERYS FOR HOME DASHBORAD  ****************************/
-@media screen and (max-width: 900px) {
-  .carousel__container {
-    max-width: 900px; }
+@media screen and (max-width: 600px) {
+  #dashBoardContainer {
+    width: 100% !important;
+    margin: 0 auto; }
 
-  .carousel-image {
-    width: 450px; }
+  #iTopDashBoard {
+    padding: 0; }
+
+  .top-box-mobile {
+    display: flex;
+    flex-direction: column; }
+    .top-box-mobile h2 {
+      color: white;
+      font-family: "Source Sans Pro";
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 45px;
+      text-align: center; }
+    .top-box-mobile p {
+      color: white;
+      font-family: "Source Sans Pro";
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center; }
+
+  .top-text-box {
+    background-color: #3cba9f;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+  .top-data-boxes {
+    display: flex;
+    flex-direction: row; }
+    .top-data-boxes .box {
+      height: 150px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .top-data-boxes .box-1 {
+      background-color: #36A2EB; }
+    .top-data-boxes .box-2 {
+      background-color: #FA6384; }
+    .top-data-boxes .box-3 {
+      background-color: #FFA24E; }
+
+  #iTopDashBoard .chartButtons {
+    display: none; }
+  #iTopDashBoard .cChart {
+    display: none; }
+
+  #quoteBanner {
+    justify-content: space-evenly; }
+    #quoteBanner h2 {
+      width: auto;
+      font-size: 24px; }
+    #quoteBanner h3 {
+      font-size: 16px; }
+
+  .carousel__container {
+    max-width: 333px; }
+    .carousel__container button {
+      width: 60px;
+      height: 60px; }
+    .carousel__container .carousel-button-image img {
+      width: 60px;
+      height: 60px; }
 
   #iBottomDashBoard {
     flex-direction: column; }
@@ -719,7 +819,78 @@ button:focus {
     width: 100%; }
 
   #iChartReaders {
-    width: 100%; } }
+    width: 100%; }
+
+  .doughnut-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    margin-bottom: 40px; }
+    .doughnut-stats .box {
+      margin: 20px 10px 0px 10px !important; }
+
+  .doughnut-text {
+    padding: 0 7px 190px 0 !important; }
+    .doughnut-text h2 {
+      font-size: 20px !important; }
+    .doughnut-text p {
+      font-size: 14px !important; }
+
+  canvas {
+    margin: 0 35px 0 0 !important; }
+
+  #iFooter {
+    height: 180px; }
+    #iFooter .footer-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 0px; }
+    #iFooter h3 {
+      font-size: 18px;
+      margin: 0; }
+    #iFooter p {
+      display: none; }
+    #iFooter img {
+      width: 80px; } }
+@media screen and (max-width: 900px) {
+  #iBottomDashBoard {
+    flex-direction: column-reverse; }
+
+  .dashBoardBoxContainer {
+    width: 100%;
+    flex-wrap: nowrap; }
+    .dashBoardBoxContainer .box {
+      height: 250px; }
+      .dashBoardBoxContainer .box h2 {
+        margin-top: 35px; }
+
+  #iChartReaders {
+    width: 100%;
+    flex-direction: column-reverse; }
+
+  .doughnut-stats {
+    flex-direction: row;
+    margin-right: 0px;
+    padding-left: 0px; }
+    .doughnut-stats .box {
+      margin: 20px 20px 50px 20px; }
+
+  .doughnut-text {
+    position: absolute;
+    padding: 0 0 100px 25px;
+    margin: 0; }
+
+  .carousel__container {
+    max-width: 666px; }
+
+  #iTopDashBoard {
+    flex-direction: column-reverse; }
+    #iTopDashBoard .btnShowChart {
+      height: 50px; }
+    #iTopDashBoard .chartButtons {
+      flex-direction: row;
+      margin-right: 0px; } }
 body {
   background: white !important; }
 
@@ -867,10 +1038,9 @@ body {
   .autherBoxImage {
     display: none; }
 
-  #iChartVisitors {
+  #chartContainer #iChartVisitors {
     display: none; }
-
-  .btnShowChart:nth-last-child(1) {
+  #chartContainer .btnShowChart:nth-last-child(1) {
     display: none; }
 
   .articles-container .card {
