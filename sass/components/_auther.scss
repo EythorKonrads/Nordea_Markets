@@ -157,6 +157,11 @@ body{
   padding-bottom: 3rem;
 }
 
+
+.none-chart {
+  display: none;
+}
+
 @media screen and (max-width: 900px){
   .container{
     width: calc(100% - 50px);
@@ -313,8 +318,15 @@ body{
   }
 
   .line {
-      width:100%;
-      // margin: 40px 0px;
+      display: none;
   }
 
+
+  .auther .autherBox {
+    display: none;
+  }
+
+  .none-chart {
+    display: block;
+  }
 }
